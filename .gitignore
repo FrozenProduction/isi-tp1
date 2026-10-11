@@ -1,0 +1,40 @@
+# ---- Pentaho / Spoon -------------------------------------------------
+.kettle/
+*.kjb.bak
+*.ktr.bak
+logs/
+*.log
+
+# ---- Vídeos -----------------------------------------------------------
+# só o link (QR Code) entra no relatório; as gravações ficam no disco
+videos/*
+!videos/.gitkeep
+
+# ---- Dados de trabalho -----------------------------------------------
+# o JSON cru da API é regenerado em cada execução (4 MB de diff a cada run):
+# fica fora do git, mas a pasta existe por causa do .gitkeep
+dados/raw/*
+!dados/raw/.gitkeep
+
+# Exportações regeneráveis: o mesmo snapshot volta a produzi-las em segundos.
+# Os agregados ficam (são pequenos e são a evidência que o dashboard lê).
+dados/out/precos_limpos.csv
+dados/out/rejeitados.csv
+
+# ---- Notas de trabalho (privadas: ficam só no disco) -----------------
+# o relatório final entra mais tarde; as notas de apoio e as consultas de
+# verificação não são material do repositório público.
+relatorio/00-notas-e-evidencias.md
+relatorio/01-conformidade-enunciado.md
+sql/99_verificacao.sql
+
+# ---- Windows / editores ----------------------------------------------
+Thumbs.db
+desktop.ini
+~$*
+*.tmp
+
+# ---- Segredos (nunca entram no repositório) --------------------------
+.env
+*.secret
+*.password

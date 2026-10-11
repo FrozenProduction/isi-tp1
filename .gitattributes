@@ -1,0 +1,8 @@
+# Fins de linha por tipo de ficheiro.
+# O Spoon/Kettle escreve CRLF (Windows); o repositório guarda LF e converte no
+# checkout. Sem isto, cada gravação do Spoon aparece como "modificado" e há
+# diffs fantasma quando o repositório é lido fora do Windows.
+*.ktr text eol=crlf
+*.kjb text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf

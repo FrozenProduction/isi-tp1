@@ -44,11 +44,16 @@ actualização do dia.
 |---|---|---|
 | DGEG — PreçoComb, preços posto a posto | JSON (REST) | `precoscombustiveis.dgeg.gov.pt/api/PrecoComb/PesquisarPostos` |
 | DGEG — distritos/concelhos | JSON (REST) | `.../api/PrecoComb/GetDistritos`, `/GetMunicipios` |
-| Preços-alvo por distrito (configuração, criada por nós) | CSV | `dados/limiares-distrito.csv` |
+| Preços-alvo por combustível (configuração, criada por nós) | CSV | `dados/limiares-combustivel.csv` |
 
 Uma única chamada à DGEG devolve **~14 000 linhas** (≈3 100 postos × 14 combustíveis) em ~1,4 s, sem chave de
 API. O total **muda ao longo do dia** (14 073 → 13 957 → 14 053), por isso cada execução é datada e guardada em
 `dados/snapshot-<data>/`; o snapshot incluído neste repositório é o de **12/10/2026 (14 053 linhas)**.
+
+O preço-alvo é **por combustível** e não por distrito: o alvo de 2,200 €/L é um alvo de gasóleo, e compará-lo com
+o GPL (≈1,00 €/L) ou com um gasóleo colorido daria alertas falsos. Os três combustíveis de estrada têm alvo
+próprio (média nacional da execução de referência, menos 1 cêntimo) e os restantes não têm alvo — deixam de
+disparar alerta.
 
 ## 5. Estrutura do repositório
 
@@ -61,6 +66,11 @@ videos/      vídeo de demonstração antes do upload
 ```
 
 ## 6. Como executar
+
+> **Antes da primeira execução — configuração fora do repositório:** a ligação à base usa `${DB_PASSWORD}`;
+> define-a no teu `KETTLE_HOME/.kettle/kettle.properties` (`DB_PASSWORD = <password do postgres>`). Nenhum
+> ficheiro deste repositório guarda a password. As fases E1/E2 leem o parâmetro `SNAPSHOT_DIR` (predefinição
+> `snapshot-2026-10-12`), por isso mudar de dia é um valor, não três caminhos.
 
 1. Instalar Java 21, Pentaho Data Integration CE 10.2 e PostgreSQL 17; criar a base `isi_tp1`.
 2. Criar o modelo: correr `sql/00_ddl.sql` no pgAdmin (a base `isi_tp1`).
@@ -76,9 +86,22 @@ videos/      vídeo de demonstração antes do upload
 | Fase | Estado | O que faz |
 |---|---|---|
 | **E — Recolha e preparação** | concluída | `E1` (API → snapshot CSV/XML/JSON + auditoria) e `E2` (snapshot → `staging_preco`, sem rede) |
-| **T — Processamento e transformação** | concluída | `T1`: leitura do staging, regex do preço (`"0,849 €"` → número), ramo de validação, unidade derivada do nome do combustível, cálculo do preço e normalização da marca, agrupamento por distrito × combustível (contagem, média, mínimo e máximo) e cruzamento com os preços-alvo |
+| **T — Processamento e transformação** | concluída | `T1` (15 passos): leitura do staging, **remoção de duplicados** (`Unique` por posto × combustível), **identificação de valores nulos** (os postos sem código postal saem em `dados/out/nulos.csv`, com o campo em falta — as linhas não se perdem), regex do preço (`"0,849 €"` → número), ramo de validação, unidade derivada do nome do combustível, cálculo do preço e normalização da marca, agrupamento por distrito × combustível (contagem, média, mínimo e máximo) e cruzamento com o preço-alvo do próprio combustível |
 | **L — Persistência, exportação e notificações** | em construção | carga do modelo dimensional, exportações (XML/JSON/CSV/SQL), email de alerta e dashboard |
 
-Números da execução de 12/10: **14 053 linhas** transformadas → **208 agregados** por distrito × combustível ×
-unidade (189 dos quais €/litro; GNC e GNL, que são €/kg e €/m³, nunca entram nas mesmas médias) → **4 distritos
-abaixo do preço-alvo** definido.
+Números da execução de 12/10: **14 053 linhas** lidas → **0 duplicados** removidos (o passo existe e é a garantia
+explícita) → **10 linhas** identificadas com código postal em falta na origem (2 postos de Viseu, listados em
+`nulos.csv`) → **14 053 linhas** limpas → **208 agregados** por distrito × combustível × unidade (189 dos quais
+€/litro; GNC e GNL, que são €/kg e €/m³, nunca entram nas mesmas médias) → **54 grupos** com preço-alvo
+(3 combustíveis de estrada × 18 distritos) → **8 alertas** abaixo do alvo do combustível:
+
+| Distrito | Combustível | Postos | Preço médio | Alvo |
+|---|---|---|---|---|
+| Aveiro | Gasóleo simples | 230 | 2,194 € | 2,200 € |
+| Braga | Gasóleo simples | 238 | 2,198 € | 2,200 € |
+| Castelo Branco | Gasóleo simples | 79 | 2,199 € | 2,200 € |
+| Aveiro | Gasolina simples 95 | 252 | 2,135 € | 2,140 € |
+| Braga | Gasolina simples 95 | 256 | 2,136 € | 2,140 € |
+| Braga | GPL Auto | 34 | 0,991 € | 1,000 € |
+| Coimbra | GPL Auto | 27 | 0,984 € | 1,000 € |
+| Lisboa | GPL Auto | 61 | 0,995 € | 1,000 € |

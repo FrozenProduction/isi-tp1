@@ -443,7 +443,7 @@
     <database>isi_tp1</database>
     <port>5432</port>
     <username>postgres</username>
-    <password>Encrypted 706dcdecc8ba0fd48388ac1fa7248d9ca683</password>
+    <password>${DB_PASSWORD}</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -491,11 +491,9 @@
     </attributes>
   </connection>
   <order>
-    <hop>
-      <from>Ler staging</from>
-      <to>Extrair preco</to>
-      <enabled>Y</enabled>
-    </hop>
+        <hop>      <from>Ler staging</from>      <to>Remover duplicados</to>      <enabled>Y</enabled>    </hop>
+    <hop>      <from>Remover duplicados</from>      <to>Extrair preco</to>      <enabled>Y</enabled>    </hop>
+    <hop>      <from>Identificar nulos</from>      <to>Escrever nulos</to>      <enabled>Y</enabled>    </hop>
     <hop>
       <from>Extrair preco</from>
       <to>Validos?</to>
@@ -2060,7 +2058,7 @@ WHERE run_id = (SELECT max(run_id) FROM staging_preco);</sql>
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>${Internal.Entry.Current.Directory}/../dados/limiares-distrito.csv</filename>
+    <filename>${Internal.Entry.Current.Directory}/../dados/limiares-combustivel.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -2074,30 +2072,7 @@ WHERE run_id = (SELECT max(run_id) FROM staging_preco);</sql>
     <newline_possible>N</newline_possible>
     <format>mixed</format>
     <encoding>UTF-8</encoding>
-    <fields>
-      <field>
-        <name>distrito</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>preco_alvo</name>
-        <type>Number</type>
-        <format>0.000</format>
-        <currency/>
-        <decimal>.</decimal>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-    </fields>
+    <fields><field><name>combustivel</name><type>String</type><format/><currency/><decimal/><group/><nullif/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field><field><name>preco_alvo</name><type>Number</type><format>0.000</format><currency/><decimal>.</decimal><group/><length>-1</length><precision>-1</precision><trim_type>none</trim_type></field></fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -2128,18 +2103,7 @@ WHERE run_id = (SELECT max(run_id) FROM staging_preco);</sql>
     <preserve_memory>Y</preserve_memory>
     <sorted_list>N</sorted_list>
     <integer_pair>N</integer_pair>
-    <lookup>
-      <key>
-        <name>distrito</name>
-        <field>distrito</field>
-      </key>
-      <value>
-        <name>preco_alvo</name>
-        <rename>preco_alvo</rename>
-        <default/>
-        <type>Number</type>
-      </value>
-    </lookup>
+    <lookup><key><name>combustivel</name><field>combustivel</field></key><value><name>preco_alvo</name><rename>preco_alvo</rename><default/><type>Number</type></value></lookup>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -2151,6 +2115,390 @@ WHERE run_id = (SELECT max(run_id) FROM staging_preco);</sql>
     <GUI>
       <xloc>1152</xloc>
       <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+<step>
+    <name>Remover duplicados</name>
+    <type>Unique</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <count_rows>N</count_rows>
+      <count_field/>
+      <reject_duplicate_row>N</reject_duplicate_row>
+      <error_description/>
+    <fields><field><name>run_id</name><case_insensitive>N</case_insensitive></field><field><name>id_posto</name><case_insensitive>N</case_insensitive></field><field><name>combustivel</name><case_insensitive>N</case_insensitive></field></fields>    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>144</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+<step>
+    <name>Identificar nulos</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>ISI_TP1</connection>
+    <sql>SELECT run_id, id_posto, nome, distrito, concelho, cod_postal, morada,
+       latitude, longitude, preco_texto,
+       CASE WHEN coalesce(cod_postal,'') = '' THEN 'cod_postal'
+            WHEN coalesce(morada,'')      = '' THEN 'morada'
+            WHEN coalesce(latitude,'')    = '' THEN 'latitude'
+            WHEN coalesce(longitude,'')   = '' THEN 'longitude'
+            WHEN coalesce(preco_texto,'') = '' THEN 'preco_texto'
+       END AS campo_em_falta
+FROM staging_preco
+WHERE run_id = (SELECT max(run_id) FROM staging_preco)
+  AND (coalesce(cod_postal,'') = '' OR coalesce(morada,'') = ''
+       OR coalesce(latitude,'') = '' OR coalesce(longitude,'') = ''
+       OR coalesce(preco_texto,'') = '');</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+<value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>run_id</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>Table input</origin>
+        <comments>run_id</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_PT</date_format_locale>
+        <date_format_timezone>Europe/Lisbon</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+<value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>id_posto</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>Table input</origin>
+        <comments>run_id</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_PT</date_format_locale>
+        <date_format_timezone>Europe/Lisbon</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+<value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>nome</name>
+        <length>2147483647</length>
+        <precision>-1</precision>
+        <origin>Table input</origin>
+        <comments>nome</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_PT</date_format_locale>
+        <date_format_timezone>Europe/Lisbon</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+<value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>distrito</name>
+        <length>2147483647</length>
+        <precision>-1</precision>
+        <origin>Table input</origin>
+        <comments>nome</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_PT</date_format_locale>
+        <date_format_timezone>Europe/Lisbon</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+<value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>concelho</name>
+        <length>2147483647</length>
+        <precision>-1</precision>
+        <origin>Table input</origin>
+        <comments>nome</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_PT</date_format_locale>
+        <date_format_timezone>Europe/Lisbon</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+<value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>cod_postal</name>
+        <length>2147483647</length>
+        <precision>-1</precision>
+        <origin>Table input</origin>
+        <comments>nome</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_PT</date_format_locale>
+        <date_format_timezone>Europe/Lisbon</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+<value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>morada</name>
+        <length>2147483647</length>
+        <precision>-1</precision>
+        <origin>Table input</origin>
+        <comments>nome</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_PT</date_format_locale>
+        <date_format_timezone>Europe/Lisbon</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+<value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>latitude</name>
+        <length>2147483647</length>
+        <precision>-1</precision>
+        <origin>Table input</origin>
+        <comments>nome</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_PT</date_format_locale>
+        <date_format_timezone>Europe/Lisbon</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+<value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>longitude</name>
+        <length>2147483647</length>
+        <precision>-1</precision>
+        <origin>Table input</origin>
+        <comments>nome</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_PT</date_format_locale>
+        <date_format_timezone>Europe/Lisbon</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+<value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>preco_texto</name>
+        <length>2147483647</length>
+        <precision>-1</precision>
+        <origin>Table input</origin>
+        <comments>nome</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_PT</date_format_locale>
+        <date_format_timezone>Europe/Lisbon</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+<value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>campo_em_falta</name>
+        <length>2147483647</length>
+        <precision>-1</precision>
+        <origin>Table input</origin>
+        <comments>nome</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>pt_PT</date_format_locale>
+        <date_format_timezone>Europe/Lisbon</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+</row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>128</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+<step>
+    <name>Escrever nulos</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>Y</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding>UTF-8</encoding>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>${Internal.Entry.Current.Directory}/../dados/out/nulos</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention>csv</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery/>
+    </file>
+    <fields><field><name>run_id</name><type>Integer</type><format>####0;-####0</format><currency/><decimal>,</decimal><group>.</group><nullif/><trim_type>none</trim_type><length>9</length><precision>0</precision></field><field><name>id_posto</name><type>Integer</type><format>####0;-####0</format><currency/><decimal>,</decimal><group>.</group><nullif/><trim_type>none</trim_type><length>9</length><precision>0</precision></field><field><name>nome</name><type>String</type><format/><currency/><decimal/><group/><nullif/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field><field><name>distrito</name><type>String</type><format/><currency/><decimal/><group/><nullif/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field><field><name>concelho</name><type>String</type><format/><currency/><decimal/><group/><nullif/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field><field><name>cod_postal</name><type>String</type><format/><currency/><decimal/><group/><nullif/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field><field><name>morada</name><type>String</type><format/><currency/><decimal/><group/><nullif/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field><field><name>latitude</name><type>String</type><format/><currency/><decimal/><group/><nullif/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field><field><name>longitude</name><type>String</type><format/><currency/><decimal/><group/><nullif/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field><field><name>preco_texto</name><type>String</type><format/><currency/><decimal/><group/><nullif/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field><field><name>campo_em_falta</name><type>String</type><format/><currency/><decimal/><group/><nullif/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field></fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>560</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

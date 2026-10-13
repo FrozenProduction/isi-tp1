@@ -8,6 +8,11 @@
     <trans_type>Normal</trans_type>
     <directory>/</directory>
     <parameters>
+      <parameter>
+        <name>SNAPSHOT_DIR</name>
+        <default_value>snapshot-2026-10-12</default_value>
+        <description>Pasta do snapshot do dia, dentro de dados/</description>
+      </parameter>
     </parameters>
     <log>
       <trans-log-table>
@@ -443,7 +448,7 @@
     <database>isi_tp1</database>
     <port>5432</port>
     <username>postgres</username>
-    <password>Encrypted 706dcdecc8ba0fd48388ac1fa7248d9ca683</password>
+    <password>${DB_PASSWORD}</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -988,7 +993,7 @@
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>${Internal.Entry.Current.Directory}/../dados/snapshot-2026-10-12/precos</name>
+      <name>${Internal.Entry.Current.Directory}/../dados/${SNAPSHOT_DIR}/precos</name>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>Y</do_not_open_new_file_init>
       <extention>csv</extention>
@@ -1216,7 +1221,7 @@
     <xml_main_element>precos</xml_main_element>
     <xml_repeat_element>posto</xml_repeat_element>
     <file>
-      <name>${Internal.Entry.Current.Directory}/../dados/snapshot-2026-10-12/precos</name>
+      <name>${Internal.Entry.Current.Directory}/../dados/${SNAPSHOT_DIR}/precos</name>
       <extention>xml</extention>
       <servlet_output>N</servlet_output>
       <do_not_open_newfile_init>Y</do_not_open_newfile_init>
@@ -1460,7 +1465,7 @@
     <encoding>UTF-8</encoding>
     <addtoresult>N</addtoresult>
     <file>
-      <name>${Internal.Entry.Current.Directory}/../dados/snapshot-2026-10-12/precos</name>
+      <name>${Internal.Entry.Current.Directory}/../dados/${SNAPSHOT_DIR}/precos</name>
       <extention>json</extention>
       <append>N</append>
       <split>N</split>

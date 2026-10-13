@@ -20,6 +20,7 @@ dados/raw/*
 # Os agregados ficam (são pequenos e são a evidência que o dashboard lê).
 dados/out/precos_limpos.csv
 dados/out/rejeitados.csv
+dados/out/nulos.csv
 
 # ---- Notas de trabalho (privadas: ficam só no disco) -----------------
 # o relatório final entra mais tarde; as notas de apoio e as consultas de

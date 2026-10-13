@@ -8,6 +8,11 @@
     <trans_type>Normal</trans_type>
     <directory>/</directory>
     <parameters>
+      <parameter>
+        <name>SNAPSHOT_DIR</name>
+        <default_value>snapshot-2026-10-12</default_value>
+        <description>Pasta do snapshot do dia, dentro de dados/</description>
+      </parameter>
     </parameters>
     <log>
       <trans-log-table>
@@ -443,7 +448,7 @@
     <database>isi_tp1</database>
     <port>5432</port>
     <username>postgres</username>
-    <password>Encrypted 706dcdecc8ba0fd48388ac1fa7248d9ca683</password>
+    <password>${DB_PASSWORD}</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -508,7 +513,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>${Internal.Entry.Current.Directory}/../dados/snapshot-2026-10-12/precos.csv</filename>
+    <filename>${Internal.Entry.Current.Directory}/../dados/${SNAPSHOT_DIR}/precos.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>

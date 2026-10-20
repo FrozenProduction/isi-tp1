@@ -9,6 +9,8 @@ logs/
 # só o link (QR Code) entra no relatório; as gravações ficam no disco
 videos/*
 !videos/.gitkeep
+*.mp4
+*.mkv
 
 # ---- Dados de trabalho -----------------------------------------------
 # o JSON cru da API é regenerado em cada execução (4 MB de diff a cada run):

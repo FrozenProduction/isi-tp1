@@ -430,11 +430,110 @@
     <created_date>2026/10/14 22:06:40.800</created_date>
     <modified_user>-</modified_user>
     <modified_date>2026/10/14 22:06:40.800</modified_date>
-    <key_for_session_key/>
+    <key_for_session_key>H4sIAAAAAAAA/wMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
-  <notepads/>
-  <order><hop><from>Ler agregados</from><to>Linha HTML</to><enabled>Y</enabled></hop><hop><from>Linha HTML</from><to>Juntar linhas</to><enabled>Y</enabled></hop><hop><from>Juntar linhas</from><to>Montar corpo</to><enabled>Y</enabled></hop><hop><from>Montar corpo</from><to>Definir variavel</to><enabled>Y</enabled></hop></order>
+  <notepads>
+  </notepads>
+  <order>
+    <hop>
+      <from>Ler agregados</from>
+      <to>Linha HTML</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Linha HTML</from>
+      <to>Juntar linhas</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Juntar linhas</from>
+      <to>Montar corpo</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Montar corpo</from>
+      <to>Definir variavel</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Definir variavel</name>
+    <type>SetVariable</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <field_name>corpo</field_name>
+        <variable_name>html_body</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+      </field>
+    </fields>
+    <use_formatting>Y</use_formatting>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>64</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Juntar linhas</name>
+    <type>GroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <all_rows>N</all_rows>
+    <ignore_aggregate>N</ignore_aggregate>
+    <field_ignore/>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>grp</prefix>
+    <add_linenr>N</add_linenr>
+    <linenr_fieldname/>
+    <give_back_row>N</give_back_row>
+    <group>
+      </group>
+    <fields>
+      <field>
+        <aggregate>linhas</aggregate>
+        <subject>linha</subject>
+        <type>CONCAT_STRING</type>
+        <valuefield/>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1120</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>Ler agregados</name>
     <type>CsvInput</type>
@@ -460,7 +559,96 @@
     <newline_possible>N</newline_possible>
     <format>mixed</format>
     <encoding>UTF-8</encoding>
-    <fields><field><name>distrito</name><type>String</type><format/><currency/><decimal/><group/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field><field><name>combustivel</name><type>String</type><format/><currency/><decimal/><group/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field><field><name>unidade</name><type>String</type><format/><currency/><decimal/><group/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field><field><name>n_postos</name><type>String</type><format/><currency/><decimal/><group/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field><field><name>preco_medio</name><type>String</type><format/><currency/><decimal/><group/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field><field><name>preco_min</name><type>String</type><format/><currency/><decimal/><group/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field><field><name>preco_max</name><type>String</type><format/><currency/><decimal/><group/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field><field><name>preco_alvo</name><type>String</type><format/><currency/><decimal/><group/><trim_type>none</trim_type><length>-1</length><precision>-1</precision></field></fields>
+    <fields>
+      <field>
+        <name>distrito</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>combustivel</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>unidade</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>n_postos</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>preco_medio</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>preco_min</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>preco_max</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>preco_alvo</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -492,19 +680,28 @@
       <jsScript>
         <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>function esc(s) { return ('' + s).replace(/&amp;/g, '&amp;amp;').replace(/&lt;/g, '&amp;lt;').replace(/&gt;/g, '&amp;gt;'); }
+        <jsScript_script>function esc(s) { return ('' + s).replace(/&amp;/g, '&amp;amp;').replace(/&lt;/g, '&amp;lt;').replace(/>/g, '&amp;gt;'); }
 function num(s) { return ('' + s).replace(',', '.'); }
 function fmt(s) { return ('' + s).replace('.', ','); }
 var alvo = '' + preco_alvo;
-var tem_alvo = alvo != 'null' &amp;&amp; alvo.length &gt; 0;
-var alerta = tem_alvo &amp;&amp; parseFloat(num(alvo)) &gt; parseFloat(num(preco_medio));
-var linha = '&lt;tr' + (alerta ? ' class="alerta"' : '') + '&gt;' +
-  '&lt;td&gt;' + esc(distrito) + '&lt;/td&gt;&lt;td&gt;' + esc(combustivel) + '&lt;/td&gt;&lt;td&gt;' + esc(unidade) + '&lt;/td&gt;' +
-  '&lt;td&gt;' + n_postos + '&lt;/td&gt;&lt;td&gt;' + fmt(preco_medio) + '&lt;/td&gt;&lt;td&gt;' + fmt(preco_min) + '&lt;/td&gt;&lt;td&gt;' + fmt(preco_max) + '&lt;/td&gt;' +
-  '&lt;td&gt;' + (tem_alvo ? fmt(alvo) : '') + '&lt;/td&gt;&lt;/tr&gt;';</jsScript_script>
+var tem_alvo = alvo != 'null' &amp;&amp; alvo.length > 0;
+var alerta = tem_alvo &amp;&amp; parseFloat(num(alvo)) > parseFloat(num(preco_medio));
+var linha = '&lt;tr' + (alerta ? ' class="alerta"' : '') + '>' +
+  '&lt;td>' + esc(distrito) + '&lt;/td>&lt;td>' + esc(combustivel) + '&lt;/td>&lt;td>' + esc(unidade) + '&lt;/td>' +
+  '&lt;td>' + n_postos + '&lt;/td>&lt;td>' + fmt(preco_medio) + '&lt;/td>&lt;td>' + fmt(preco_min) + '&lt;/td>&lt;td>' + fmt(preco_max) + '&lt;/td>' +
+  '&lt;td>' + (tem_alvo ? fmt(alvo) : '') + '&lt;/td>&lt;/tr>';</jsScript_script>
       </jsScript>
     </jsScripts>
-    <fields><field><name>linha</name><rename>linha</rename><type>String</type><length>-1</length><precision>-1</precision><replace>N</replace></field></fields>
+    <fields>
+      <field>
+        <name>linha</name>
+        <rename>linha</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -514,44 +711,8 @@ var linha = '&lt;tr' + (alerta ? ' class="alerta"' : '') + '&gt;' +
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>176</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Juntar linhas</name>
-    <type>GroupBy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <all_rows>N</all_rows>
-    <ignore_aggregate>N</ignore_aggregate>
-    <field_ignore/>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>grp</prefix>
-    <add_linenr>N</add_linenr>
-    <linenr_fieldname/>
-    <give_back_row>N</give_back_row>
-    <group>
-    </group>
-    <fields><field><aggregate>linhas</aggregate><subject>linha</subject><type>CONCAT_STRING</type><valuefield/></field></fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1152</xloc>
-      <yloc>176</yloc>
+      <xloc>704</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -572,53 +733,28 @@ var linha = '&lt;tr' + (alerta ? ' class="alerta"' : '') + '&gt;' +
       <jsScript>
         <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>var corpo = '&lt;html&gt;&lt;head&gt;&lt;meta charset="utf-8"/&gt;&lt;style&gt;' +
+        <jsScript_script>var corpo = '&lt;html>&lt;head>&lt;meta charset="utf-8"/>&lt;style>' +
   'body{font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#222222}' +
   'table{border-collapse:collapse;width:100%}th,td{border:1px solid #bbbbbb;padding:4px 6px;text-align:left}' +
-  'th{background-color:#333333;color:#ffffff}tr.alerta td{background-color:#ffdede}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;' +
-  '&lt;h2&gt;TP1 ISI - Precos de combustiveis: execucao concluida&lt;/h2&gt;' +
-  '&lt;p&gt;Resumo por distrito e combustivel a partir dos agregados da execucao. As linhas destacadas estao abaixo do ' +
-  'preco-alvo definido em dados/limiares-combustivel.csv.&lt;/p&gt;' +
-  '&lt;table&gt;&lt;tr&gt;&lt;th&gt;Distrito&lt;/th&gt;&lt;th&gt;Combustivel&lt;/th&gt;&lt;th&gt;Unidade&lt;/th&gt;&lt;th&gt;Postos&lt;/th&gt;&lt;th&gt;Media&lt;/th&gt;&lt;th&gt;Minimo&lt;/th&gt;' +
-  '&lt;th&gt;Maximo&lt;/th&gt;&lt;th&gt;Alvo&lt;/th&gt;&lt;/tr&gt;' + linhas + '&lt;/table&gt;' +
-  '&lt;p&gt;Ficheiros da execucao em dados/export/: relatorio.html e agg_distrito_combustivel .csv / .json / .xml / .sql.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;';</jsScript_script>
+  'th{background-color:#333333;color:#ffffff}tr.alerta td{background-color:#ffdede}&lt;/style>&lt;/head>&lt;body>' +
+  '&lt;h2>TP1 ISI - Precos de combustiveis: execucao concluida&lt;/h2>' +
+  '&lt;p>Resumo por distrito e combustivel a partir dos agregados da execucao. As linhas destacadas estao abaixo do ' +
+  'preco-alvo definido em dados/limiares-combustivel.csv.&lt;/p>' +
+  '&lt;table>&lt;tr>&lt;th>Distrito&lt;/th>&lt;th>Combustivel&lt;/th>&lt;th>Unidade&lt;/th>&lt;th>Postos&lt;/th>&lt;th>Media&lt;/th>&lt;th>Minimo&lt;/th>' +
+  '&lt;th>Maximo&lt;/th>&lt;th>Alvo&lt;/th>&lt;/tr>' + linhas + '&lt;/table>' +
+  '&lt;p>Ficheiros da execucao em dados/export/: relatorio.html e agg_distrito_combustivel .csv / .json / .xml / .sql.&lt;/p>&lt;/body>&lt;/html>';</jsScript_script>
       </jsScript>
     </jsScripts>
-    <fields><field><name>corpo</name><rename>corpo</rename><type>String</type><length>-1</length><precision>-1</precision><replace>N</replace></field></fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>720</xloc>
-      <yloc>176</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Definir variavel</name>
-    <type>SetVariable</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
     <fields>
       <field>
-        <field_name>corpo</field_name>
-        <variable_name>html_body</variable_name>
-        <variable_type>JVM</variable_type>
-        <default_value/>
+        <name>corpo</name>
+        <rename>corpo</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
       </field>
     </fields>
-    <use_formatting>Y</use_formatting>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -628,13 +764,15 @@ var linha = '&lt;tr' + (alerta ? ' class="alerta"' : '') + '&gt;' +
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>128</yloc>
+      <xloc>1120</xloc>
+      <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
-  <step_error_handling/>
-  <slave-step-copy-partition-distribution/>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
   <attributes/>
 </transformation>

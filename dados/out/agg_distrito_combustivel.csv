@@ -1,209 +1,209 @@
 "distrito";"combustivel";"unidade";n_postos;preco_medio;preco_min;preco_max;preco_alvo
-"Aveiro";"Biodiesel B15";"litro";"25";"2.126";"2.089";"2.249";
-"Aveiro";"Gasolina 98";"litro";"49";"2.254";"2.039";"2.434";
+"Aveiro";"Biodiesel B15";"litro";"25";"2.148";"2.119";"2.249";
+"Aveiro";"Gasolina 98";"litro";"51";"2.253";"2.019";"2.434";
 "Aveiro";"Gasolina de mistura (motores a 2 tempos)";"litro";"9";"2.499";"2.199";"2.800";
-"Aveiro";"Gasolina especial 95";"litro";"107";"2.169";"1.985";"2.329";
-"Aveiro";"Gasolina especial 98";"litro";"97";"2.400";"2.285";"2.459";
-"Aveiro";"Gasolina simples 95";"litro";"248";"2.140";"1.929";"2.249";"2.140"
-"Aveiro";"Gasóleo colorido";"litro";"94";"1.828";"1.644";"1.939";
-"Aveiro";"Gasóleo de aquecimento";"litro";"8";"2.193";"1.900";"2.334";
-"Aveiro";"Gasóleo especial";"litro";"233";"2.278";"2.049";"2.439";
-"Aveiro";"Gasóleo simples";"litro";"225";"2.220";"1.989";"2.354";"2.200"
+"Aveiro";"Gasolina especial 95";"litro";"111";"2.166";"1.984";"2.334";
+"Aveiro";"Gasolina especial 98";"litro";"99";"2.396";"2.285";"2.459";
+"Aveiro";"Gasolina simples 95";"litro";"255";"2.135";"1.929";"2.254";"2.140"
+"Aveiro";"Gasóleo colorido";"litro";"100";"1.835";"1.644";"1.939";
+"Aveiro";"Gasóleo de aquecimento";"litro";"9";"2.218";"1.900";"2.334";
+"Aveiro";"Gasóleo especial";"litro";"240";"2.284";"2.018";"2.444";
+"Aveiro";"Gasóleo simples";"litro";"232";"2.226";"1.989";"2.359";"2.200"
 "Aveiro";"GNC (gás natural comprimido) - €/m3";"m3";"1";"3.279";"3.279";"3.279";
 "Aveiro";"GNL (gás natural liquefeito) - €/kg";"kg";"1";"3.279";"3.279";"3.279";
-"Aveiro";"GPL Auto";"litro";"32";"1.016";"0.929";"1.159";"1.000"
+"Aveiro";"GPL Auto";"litro";"32";"1.021";"0.929";"1.159";"1.000"
 "Beja";"Biodiesel B15";"litro";"3";"2.186";"2.149";"2.259";
-"Beja";"Gasolina 98";"litro";"14";"2.361";"2.226";"2.402";
-"Beja";"Gasolina especial 95";"litro";"27";"2.206";"2.041";"2.294";
-"Beja";"Gasolina especial 98";"litro";"16";"2.399";"2.334";"2.459";
-"Beja";"Gasolina simples 95";"litro";"75";"2.171";"2.019";"2.250";"2.140"
-"Beja";"Gasóleo colorido";"litro";"56";"1.828";"1.639";"1.939";
-"Beja";"Gasóleo de aquecimento";"litro";"2";"2.264";"2.225";"2.302";
-"Beja";"Gasóleo especial";"litro";"72";"2.299";"2.082";"2.429";
-"Beja";"Gasóleo simples";"litro";"76";"2.241";"2.062";"2.329";"2.200"
+"Beja";"Gasolina 98";"litro";"14";"2.345";"2.202";"2.394";
+"Beja";"Gasolina especial 95";"litro";"27";"2.201";"2.031";"2.294";
+"Beja";"Gasolina especial 98";"litro";"16";"2.398";"2.324";"2.459";
+"Beja";"Gasolina simples 95";"litro";"75";"2.164";"2.011";"2.249";"2.140"
+"Beja";"Gasóleo colorido";"litro";"59";"1.840";"1.669";"1.940";
+"Beja";"Gasóleo de aquecimento";"litro";"2";"2.290";"2.278";"2.302";
+"Beja";"Gasóleo especial";"litro";"72";"2.311";"2.112";"2.429";
+"Beja";"Gasóleo simples";"litro";"79";"2.251";"2.092";"2.329";"2.200"
 "Beja";"GPL Auto";"litro";"6";"1.076";"1.049";"1.089";"1.000"
-"Braga";"Biodiesel B15";"litro";"22";"2.119";"2.089";"2.154";
-"Braga";"Gasolina 98";"litro";"47";"2.242";"2.082";"2.434";
+"Braga";"Biodiesel B15";"litro";"22";"2.129";"2.099";"2.154";
+"Braga";"Gasolina 98";"litro";"50";"2.232";"2.069";"2.434";
 "Braga";"Gasolina de mistura (motores a 2 tempos)";"litro";"4";"2.373";"2.259";"2.434";
-"Braga";"Gasolina especial 95";"litro";"112";"2.163";"2.018";"2.274";
-"Braga";"Gasolina especial 98";"litro";"111";"2.390";"2.099";"2.459";
-"Braga";"Gasolina simples 95";"litro";"257";"2.135";"1.987";"2.249";"2.140"
-"Braga";"Gasóleo colorido";"litro";"128";"1.831";"1.520";"2.289";
-"Braga";"Gasóleo de aquecimento";"litro";"14";"2.204";"2.089";"2.334";
-"Braga";"Gasóleo especial";"litro";"248";"2.279";"2.069";"2.499";
-"Braga";"Gasóleo simples";"litro";"239";"2.222";"2.039";"2.332";"2.200"
-"Braga";"GPL Auto";"litro";"33";"1.018";"0.929";"1.232";"1.000"
+"Braga";"Gasolina especial 95";"litro";"113";"2.158";"2.017";"2.274";
+"Braga";"Gasolina especial 98";"litro";"111";"2.388";"2.099";"2.459";
+"Braga";"Gasolina simples 95";"litro";"262";"2.128";"1.979";"2.224";"2.140"
+"Braga";"Gasóleo colorido";"litro";"132";"1.835";"1.520";"2.289";
+"Braga";"Gasóleo de aquecimento";"litro";"16";"2.228";"2.139";"2.334";
+"Braga";"Gasóleo especial";"litro";"251";"2.285";"2.089";"2.499";
+"Braga";"Gasóleo simples";"litro";"244";"2.227";"2.059";"2.332";"2.200"
+"Braga";"GPL Auto";"litro";"35";"1.026";"0.929";"1.232";"1.000"
 "Bragança";"Biodiesel B15";"litro";"1";"2.154";"2.154";"2.154";
-"Bragança";"Gasolina 98";"litro";"8";"2.236";"2.059";"2.434";
+"Bragança";"Gasolina 98";"litro";"10";"2.255";"2.049";"2.536";
 "Bragança";"Gasolina de mistura (motores a 2 tempos)";"litro";"1";"2.500";"2.500";"2.500";
-"Bragança";"Gasolina especial 95";"litro";"27";"2.188";"2.049";"2.274";
-"Bragança";"Gasolina especial 98";"litro";"26";"2.400";"2.327";"2.459";
-"Bragança";"Gasolina simples 95";"litro";"67";"2.169";"2.019";"2.249";"2.140"
-"Bragança";"Gasóleo colorido";"litro";"61";"1.854";"1.749";"1.900";
-"Bragança";"Gasóleo de aquecimento";"litro";"4";"2.267";"2.190";"2.304";
-"Bragança";"Gasóleo especial";"litro";"62";"2.306";"2.069";"2.434";
-"Bragança";"Gasóleo simples";"litro";"69";"2.256";"2.049";"2.334";"2.200"
+"Bragança";"Gasolina especial 95";"litro";"28";"2.185";"2.039";"2.274";
+"Bragança";"Gasolina especial 98";"litro";"28";"2.398";"2.327";"2.459";
+"Bragança";"Gasolina simples 95";"litro";"73";"2.166";"2.009";"2.249";"2.140"
+"Bragança";"Gasóleo colorido";"litro";"66";"1.856";"1.749";"1.900";
+"Bragança";"Gasóleo de aquecimento";"litro";"5";"2.266";"2.190";"2.304";
+"Bragança";"Gasóleo especial";"litro";"67";"2.307";"2.089";"2.434";
+"Bragança";"Gasóleo simples";"litro";"75";"2.258";"2.069";"2.334";"2.200"
 "Bragança";"GNC (gás natural comprimido) - €/m3";"m3";"1";"3.279";"3.279";"3.279";
 "Bragança";"GPL Auto";"litro";"3";"1.061";"0.996";"1.123";"1.000"
-"Castelo Branco";"Biodiesel B15";"litro";"6";"2.244";"2.109";"2.362";
-"Castelo Branco";"Gasolina 98";"litro";"13";"2.301";"2.079";"2.434";
+"Castelo Branco";"Biodiesel B15";"litro";"6";"2.271";"2.124";"2.392";
+"Castelo Branco";"Gasolina 98";"litro";"13";"2.292";"2.069";"2.434";
 "Castelo Branco";"Gasolina de mistura (motores a 2 tempos)";"litro";"5";"2.824";"2.650";"3.020";
-"Castelo Branco";"Gasolina especial 95";"litro";"35";"2.167";"2.014";"2.282";
-"Castelo Branco";"Gasolina especial 98";"litro";"28";"2.388";"2.209";"2.459";
-"Castelo Branco";"Gasolina simples 95";"litro";"85";"2.151";"1.959";"2.370";"2.140"
-"Castelo Branco";"Gasóleo colorido";"litro";"50";"1.848";"1.704";"1.995";
-"Castelo Branco";"Gasóleo de aquecimento";"litro";"5";"2.229";"2.179";"2.302";
-"Castelo Branco";"Gasóleo especial";"litro";"80";"2.276";"2.059";"2.429";
-"Castelo Branco";"Gasóleo simples";"litro";"80";"2.221";"2.029";"2.319";"2.200"
+"Castelo Branco";"Gasolina especial 95";"litro";"35";"2.161";"1.994";"2.274";
+"Castelo Branco";"Gasolina especial 98";"litro";"28";"2.386";"2.209";"2.444";
+"Castelo Branco";"Gasolina simples 95";"litro";"85";"2.142";"1.969";"2.345";"2.140"
+"Castelo Branco";"Gasóleo colorido";"litro";"50";"1.860";"1.730";"2.030";
+"Castelo Branco";"Gasóleo de aquecimento";"litro";"5";"2.235";"2.179";"2.302";
+"Castelo Branco";"Gasóleo especial";"litro";"80";"2.286";"2.099";"2.429";
+"Castelo Branco";"Gasóleo simples";"litro";"80";"2.230";"2.069";"2.345";"2.200"
 "Castelo Branco";"GPL Auto";"litro";"13";"1.025";"0.969";"1.079";"1.000"
-"Coimbra";"Biodiesel B15";"litro";"6";"2.128";"2.099";"2.169";
-"Coimbra";"Gasolina 98";"litro";"45";"2.298";"2.011";"2.403";
-"Coimbra";"Gasolina de mistura (motores a 2 tempos)";"litro";"8";"2.479";"2.392";"2.600";
-"Coimbra";"Gasolina especial 95";"litro";"55";"2.193";"2.029";"2.304";
-"Coimbra";"Gasolina especial 98";"litro";"42";"2.387";"2.315";"2.459";
-"Coimbra";"Gasolina simples 95";"litro";"148";"2.153";"2.028";"2.244";"2.140"
-"Coimbra";"Gasóleo colorido";"litro";"81";"1.844";"1.640";"1.939";
-"Coimbra";"Gasóleo de aquecimento";"litro";"10";"2.207";"2.000";"2.340";
-"Coimbra";"Gasóleo especial";"litro";"139";"2.288";"2.105";"2.449";
-"Coimbra";"Gasóleo simples";"litro";"142";"2.244";"2.065";"2.349";"2.200"
-"Coimbra";"GPL Auto";"litro";"26";"0.992";"0.909";"1.079";"1.000"
-"Faro";"Biodiesel B15";"litro";"9";"2.152";"2.089";"2.309";
-"Faro";"Gasolina 98";"litro";"19";"2.217";"2.088";"2.434";
-"Faro";"Gasolina especial 95";"litro";"91";"2.200";"2.018";"2.284";
-"Faro";"Gasolina especial 98";"litro";"78";"2.401";"2.304";"2.462";
-"Faro";"Gasolina simples 95";"litro";"180";"2.159";"1.939";"2.309";"2.140"
-"Faro";"Gasóleo colorido";"litro";"50";"1.851";"1.320";"1.939";
-"Faro";"Gasóleo especial";"litro";"169";"2.308";"2.049";"2.429";
-"Faro";"Gasóleo simples";"litro";"173";"2.250";"1.999";"2.329";"2.200"
-"Faro";"GPL Auto";"litro";"21";"1.022";"0.936";"1.089";"1.000"
-"Guarda";"Biodiesel B15";"litro";"3";"2.143";"2.094";"2.222";
-"Guarda";"Gasolina 98";"litro";"19";"2.318";"2.149";"2.406";
+"Coimbra";"Biodiesel B15";"litro";"6";"2.150";"2.129";"2.169";
+"Coimbra";"Gasolina 98";"litro";"45";"2.296";"2.068";"2.387";
+"Coimbra";"Gasolina de mistura (motores a 2 tempos)";"litro";"8";"2.473";"2.392";"2.600";
+"Coimbra";"Gasolina especial 95";"litro";"55";"2.190";"2.029";"2.304";
+"Coimbra";"Gasolina especial 98";"litro";"42";"2.387";"2.315";"2.464";
+"Coimbra";"Gasolina simples 95";"litro";"148";"2.150";"2.025";"2.254";"2.140"
+"Coimbra";"Gasóleo colorido";"litro";"81";"1.848";"1.640";"1.939";
+"Coimbra";"Gasóleo de aquecimento";"litro";"10";"2.226";"2.000";"2.340";
+"Coimbra";"Gasóleo especial";"litro";"139";"2.293";"2.145";"2.459";
+"Coimbra";"Gasóleo simples";"litro";"142";"2.249";"2.105";"2.359";"2.200"
+"Coimbra";"GPL Auto";"litro";"27";"0.997";"0.909";"1.079";"1.000"
+"Faro";"Biodiesel B15";"litro";"9";"2.171";"2.129";"2.309";
+"Faro";"Gasolina 98";"litro";"21";"2.203";"2.069";"2.434";
+"Faro";"Gasolina especial 95";"litro";"93";"2.194";"2.018";"2.284";
+"Faro";"Gasolina especial 98";"litro";"82";"2.393";"2.170";"2.459";
+"Faro";"Gasolina simples 95";"litro";"185";"2.156";"1.939";"2.249";"2.140"
+"Faro";"Gasóleo colorido";"litro";"52";"1.855";"1.350";"1.939";
+"Faro";"Gasóleo especial";"litro";"174";"2.311";"2.079";"2.429";
+"Faro";"Gasóleo simples";"litro";"178";"2.254";"2.029";"2.329";"2.200"
+"Faro";"GPL Auto";"litro";"21";"1.024";"0.936";"1.089";"1.000"
+"Guarda";"Biodiesel B15";"litro";"3";"2.163";"2.124";"2.222";
+"Guarda";"Gasolina 98";"litro";"20";"2.312";"2.149";"2.406";
 "Guarda";"Gasolina de mistura (motores a 2 tempos)";"litro";"6";"2.700";"2.400";"3.000";
-"Guarda";"Gasolina especial 95";"litro";"33";"2.200";"2.029";"2.274";
-"Guarda";"Gasolina especial 98";"litro";"31";"2.386";"1.983";"2.459";
-"Guarda";"Gasolina simples 95";"litro";"94";"2.160";"2.009";"2.249";"2.140"
-"Guarda";"Gasóleo colorido";"litro";"59";"1.824";"1.189";"1.939";
-"Guarda";"Gasóleo de aquecimento";"litro";"4";"2.139";"1.721";"2.306";
-"Guarda";"Gasóleo especial";"litro";"90";"2.294";"2.079";"2.429";
-"Guarda";"Gasóleo simples";"litro";"91";"2.239";"2.059";"2.329";"2.200"
+"Guarda";"Gasolina especial 95";"litro";"33";"2.195";"2.029";"2.274";
+"Guarda";"Gasolina especial 98";"litro";"31";"2.382";"1.983";"2.459";
+"Guarda";"Gasolina simples 95";"litro";"96";"2.152";"1.929";"2.249";"2.140"
+"Guarda";"Gasóleo colorido";"litro";"60";"1.834";"1.189";"1.939";
+"Guarda";"Gasóleo de aquecimento";"litro";"4";"2.152";"1.721";"2.306";
+"Guarda";"Gasóleo especial";"litro";"90";"2.304";"2.109";"2.429";
+"Guarda";"Gasóleo simples";"litro";"93";"2.244";"1.949";"2.329";"2.200"
 "Guarda";"GNC (gás natural comprimido) - €/m3";"m3";"1";"3.279";"3.279";"3.279";
 "Guarda";"GNL (gás natural liquefeito) - €/kg";"kg";"1";"3.279";"3.279";"3.279";
 "Guarda";"GPL Auto";"litro";"9";"1.057";"1.028";"1.089";"1.000"
-"Leiria";"Biodiesel B15";"litro";"14";"2.129";"2.069";"2.259";
-"Leiria";"Gasolina 98";"litro";"56";"2.251";"2.082";"2.434";
-"Leiria";"Gasolina de mistura (motores a 2 tempos)";"litro";"9";"2.612";"2.400";"3.130";
-"Leiria";"Gasolina especial 95";"litro";"90";"2.195";"2.022";"2.324";
-"Leiria";"Gasolina especial 98";"litro";"79";"2.393";"1.998";"2.484";
-"Leiria";"Gasolina simples 95";"litro";"226";"2.150";"1.929";"2.254";"2.140"
-"Leiria";"Gasóleo colorido";"litro";"116";"1.822";"1.000";"1.939";
-"Leiria";"Gasóleo de aquecimento";"litro";"14";"2.232";"1.721";"2.423";
-"Leiria";"Gasóleo especial";"litro";"212";"2.289";"2.049";"2.429";
-"Leiria";"Gasóleo simples";"litro";"214";"2.232";"2.009";"2.359";"2.200"
+"Leiria";"Biodiesel B15";"litro";"14";"2.145";"2.099";"2.259";
+"Leiria";"Gasolina 98";"litro";"57";"2.245";"2.082";"2.434";
+"Leiria";"Gasolina de mistura (motores a 2 tempos)";"litro";"9";"2.609";"2.400";"3.130";
+"Leiria";"Gasolina especial 95";"litro";"90";"2.191";"2.022";"2.324";
+"Leiria";"Gasolina especial 98";"litro";"79";"2.389";"1.998";"2.484";
+"Leiria";"Gasolina simples 95";"litro";"227";"2.144";"1.929";"2.254";"2.140"
+"Leiria";"Gasóleo colorido";"litro";"117";"1.829";"1.000";"1.939";
+"Leiria";"Gasóleo de aquecimento";"litro";"14";"2.235";"1.721";"2.423";
+"Leiria";"Gasóleo especial";"litro";"213";"2.295";"2.049";"2.429";
+"Leiria";"Gasóleo simples";"litro";"215";"2.237";"2.009";"2.359";"2.200"
 "Leiria";"GNC (gás natural comprimido) - €/kg";"kg";"1";"3.041";"3.041";"3.041";
 "Leiria";"GNL (gás natural liquefeito) - €/kg";"kg";"1";"2.999";"2.999";"2.999";
-"Leiria";"GPL Auto";"litro";"33";"1.015";"0.898";"1.135";"1.000"
-"Lisboa";"Biodiesel B15";"litro";"28";"2.134";"2.069";"2.309";
-"Lisboa";"Gasolina 98";"litro";"34";"2.224";"1.999";"2.434";
-"Lisboa";"Gasolina especial 95";"litro";"221";"2.209";"2.019";"2.324";
+"Leiria";"GPL Auto";"litro";"32";"1.024";"0.929";"1.135";"1.000"
+"Lisboa";"Biodiesel B15";"litro";"28";"2.158";"2.099";"2.309";
+"Lisboa";"Gasolina 98";"litro";"35";"2.226";"2.129";"2.434";
+"Lisboa";"Gasolina especial 95";"litro";"224";"2.206";"2.029";"2.324";
 "Lisboa";"Gasolina especial 98";"litro";"153";"2.404";"2.019";"2.469";
-"Lisboa";"Gasolina simples 95";"litro";"379";"2.164";"1.939";"2.293";"2.140"
-"Lisboa";"Gasóleo colorido";"litro";"68";"1.830";"1.631";"1.939";
-"Lisboa";"Gasóleo especial";"litro";"363";"2.308";"1.999";"2.459";
-"Lisboa";"Gasóleo simples";"litro";"361";"2.255";"1.999";"2.394";"2.200"
-"Lisboa";"GNC (gás natural comprimido) - €/kg";"kg";"2";"2.554";"2.108";"3.001";
+"Lisboa";"Gasolina simples 95";"litro";"387";"2.161";"1.939";"2.293";"2.140"
+"Lisboa";"Gasóleo colorido";"litro";"71";"1.837";"1.631";"1.939";
+"Lisboa";"Gasóleo especial";"litro";"370";"2.313";"2.059";"2.429";
+"Lisboa";"Gasóleo simples";"litro";"370";"2.258";"2.029";"2.394";"2.200"
+"Lisboa";"GNC (gás natural comprimido) - €/kg";"kg";"2";"2.625";"2.108";"3.141";
 "Lisboa";"GNC (gás natural comprimido) - €/m3";"m3";"2";"3.279";"3.279";"3.279";
-"Lisboa";"GNL (gás natural liquefeito) - €/kg";"kg";"3";"3.112";"2.959";"3.279";
-"Lisboa";"GPL Auto";"litro";"61";"1.002";"0.879";"1.119";"1.000"
-"Portalegre";"Biodiesel B15";"litro";"4";"2.150";"2.124";"2.169";
-"Portalegre";"Gasolina 98";"litro";"7";"2.294";"2.213";"2.429";
-"Portalegre";"Gasolina especial 95";"litro";"19";"2.197";"2.099";"2.262";
-"Portalegre";"Gasolina especial 98";"litro";"10";"2.402";"2.315";"2.459";
-"Portalegre";"Gasolina simples 95";"litro";"50";"2.157";"2.049";"2.244";"2.140"
-"Portalegre";"Gasóleo colorido";"litro";"35";"1.855";"1.789";"1.939";
-"Portalegre";"Gasóleo especial";"litro";"48";"2.298";"2.119";"2.429";
-"Portalegre";"Gasóleo simples";"litro";"47";"2.244";"2.089";"2.324";"2.200"
+"Lisboa";"GNL (gás natural liquefeito) - €/kg";"kg";"3";"3.159";"3.099";"3.279";
+"Lisboa";"GPL Auto";"litro";"61";"1.005";"0.879";"1.119";"1.000"
+"Portalegre";"Biodiesel B15";"litro";"4";"2.158";"2.139";"2.169";
+"Portalegre";"Gasolina 98";"litro";"7";"2.286";"2.186";"2.429";
+"Portalegre";"Gasolina especial 95";"litro";"20";"2.192";"2.094";"2.236";
+"Portalegre";"Gasolina especial 98";"litro";"11";"2.400";"2.315";"2.434";
+"Portalegre";"Gasolina simples 95";"litro";"51";"2.152";"2.019";"2.224";"2.140"
+"Portalegre";"Gasóleo colorido";"litro";"36";"1.866";"1.789";"1.939";
+"Portalegre";"Gasóleo especial";"litro";"49";"2.306";"2.129";"2.429";
+"Portalegre";"Gasóleo simples";"litro";"48";"2.253";"2.099";"2.329";"2.200"
 "Portalegre";"GNC (gás natural comprimido) - €/m3";"m3";"1";"3.279";"3.279";"3.279";
 "Portalegre";"GNL (gás natural liquefeito) - €/kg";"kg";"1";"3.279";"3.279";"3.279";
 "Portalegre";"GPL Auto";"litro";"3";"1.026";"1.019";"1.029";"1.000"
-"Porto";"Biodiesel B15";"litro";"40";"2.126";"2.064";"2.269";
-"Porto";"Gasolina 98";"litro";"45";"2.261";"2.078";"2.414";
+"Porto";"Biodiesel B15";"litro";"41";"2.141";"2.084";"2.269";
+"Porto";"Gasolina 98";"litro";"45";"2.258";"2.078";"2.423";
 "Porto";"Gasolina de mistura (motores a 2 tempos)";"litro";"20";"2.547";"2.300";"2.950";
-"Porto";"Gasolina especial 95";"litro";"268";"2.179";"2.009";"2.329";
-"Porto";"Gasolina especial 98";"litro";"203";"2.401";"2.123";"2.459";
-"Porto";"Gasolina simples 95";"litro";"458";"2.148";"1.979";"2.335";"2.140"
-"Porto";"Gasóleo colorido";"litro";"123";"1.836";"1.194";"1.939";
-"Porto";"Gasóleo de aquecimento";"litro";"11";"2.242";"2.095";"2.334";
-"Porto";"Gasóleo especial";"litro";"443";"2.289";"2.049";"2.449";
-"Porto";"Gasóleo simples";"litro";"423";"2.234";"1.999";"2.364";"2.200"
+"Porto";"Gasolina especial 95";"litro";"268";"2.173";"2.009";"2.334";
+"Porto";"Gasolina especial 98";"litro";"203";"2.396";"2.123";"2.459";
+"Porto";"Gasolina simples 95";"litro";"458";"2.143";"1.979";"2.335";"2.140"
+"Porto";"Gasóleo colorido";"litro";"124";"1.839";"1.194";"1.939";
+"Porto";"Gasóleo de aquecimento";"litro";"11";"2.258";"2.095";"2.334";
+"Porto";"Gasóleo especial";"litro";"443";"2.295";"2.079";"2.444";
+"Porto";"Gasóleo simples";"litro";"422";"2.240";"2.049";"2.359";"2.200"
 "Porto";"GNC (gás natural comprimido) - €/kg";"kg";"1";"3.141";"3.141";"3.141";
 "Porto";"GNC (gás natural comprimido) - €/m3";"m3";"2";"3.279";"3.279";"3.279";
 "Porto";"GNL (gás natural liquefeito) - €/kg";"kg";"3";"3.219";"3.099";"3.279";
-"Porto";"GPL Auto";"litro";"84";"1.014";"0.889";"1.089";"1.000"
-"Santarém";"Biodiesel B15";"litro";"14";"2.124";"2.069";"2.219";
-"Santarém";"Gasolina 98";"litro";"52";"2.254";"2.082";"2.495";
-"Santarém";"Gasolina de mistura (motores a 2 tempos)";"litro";"7";"2.697";"2.330";"2.950";
-"Santarém";"Gasolina especial 95";"litro";"84";"2.189";"1.969";"2.324";
-"Santarém";"Gasolina especial 98";"litro";"66";"2.407";"2.285";"2.484";
-"Santarém";"Gasolina simples 95";"litro";"211";"2.150";"1.919";"2.320";"2.140"
-"Santarém";"Gasóleo colorido";"litro";"115";"1.836";"1.694";"1.968";
-"Santarém";"Gasóleo de aquecimento";"litro";"6";"2.285";"2.050";"2.381";
-"Santarém";"Gasóleo especial";"litro";"194";"2.278";"2.029";"2.449";
-"Santarém";"Gasóleo simples";"litro";"202";"2.223";"1.979";"2.359";"2.200"
+"Porto";"GPL Auto";"litro";"84";"1.018";"0.889";"1.089";"1.000"
+"Santarém";"Biodiesel B15";"litro";"14";"2.150";"2.099";"2.249";
+"Santarém";"Gasolina 98";"litro";"56";"2.246";"2.082";"2.470";
+"Santarém";"Gasolina de mistura (motores a 2 tempos)";"litro";"9";"2.661";"2.300";"2.950";
+"Santarém";"Gasolina especial 95";"litro";"86";"2.182";"1.969";"2.324";
+"Santarém";"Gasolina especial 98";"litro";"67";"2.401";"2.285";"2.484";
+"Santarém";"Gasolina simples 95";"litro";"219";"2.141";"1.919";"2.295";"2.140"
+"Santarém";"Gasóleo colorido";"litro";"121";"1.844";"1.720";"1.979";
+"Santarém";"Gasóleo de aquecimento";"litro";"7";"2.285";"2.100";"2.381";
+"Santarém";"Gasóleo especial";"litro";"200";"2.288";"2.049";"2.459";
+"Santarém";"Gasóleo simples";"litro";"210";"2.233";"1.979";"2.359";"2.200"
 "Santarém";"GNL (gás natural liquefeito) - €/kg";"kg";"1";"2.874";"2.874";"2.874";
-"Santarém";"GPL Auto";"litro";"30";"1.024";"0.924";"1.089";"1.000"
-"Setúbal";"Biodiesel B15";"litro";"16";"2.128";"2.094";"2.309";
-"Setúbal";"Gasolina 98";"litro";"17";"2.287";"2.118";"2.434";
+"Santarém";"GPL Auto";"litro";"32";"1.029";"0.935";"1.199";"1.000"
+"Setúbal";"Biodiesel B15";"litro";"16";"2.157";"2.119";"2.309";
+"Setúbal";"Gasolina 98";"litro";"17";"2.285";"2.118";"2.434";
 "Setúbal";"Gasolina de mistura (motores a 2 tempos)";"litro";"1";"2.500";"2.500";"2.500";
-"Setúbal";"Gasolina especial 95";"litro";"107";"2.195";"2.041";"2.324";
-"Setúbal";"Gasolina especial 98";"litro";"78";"2.370";"1.999";"2.484";
-"Setúbal";"Gasolina simples 95";"litro";"193";"2.154";"2.013";"2.254";"2.140"
-"Setúbal";"Gasóleo colorido";"litro";"39";"1.844";"1.724";"1.894";
+"Setúbal";"Gasolina especial 95";"litro";"107";"2.188";"2.019";"2.324";
+"Setúbal";"Gasolina especial 98";"litro";"78";"2.368";"1.999";"2.484";
+"Setúbal";"Gasolina simples 95";"litro";"193";"2.148";"1.999";"2.254";"2.140"
+"Setúbal";"Gasóleo colorido";"litro";"39";"1.850";"1.754";"1.894";
 "Setúbal";"Gasóleo de aquecimento";"litro";"1";"2.262";"2.262";"2.262";
-"Setúbal";"Gasóleo especial";"litro";"187";"2.308";"2.103";"2.429";
-"Setúbal";"Gasóleo simples";"litro";"181";"2.244";"2.069";"2.359";"2.200"
+"Setúbal";"Gasóleo especial";"litro";"187";"2.314";"2.124";"2.429";
+"Setúbal";"Gasóleo simples";"litro";"181";"2.249";"2.069";"2.359";"2.200"
 "Setúbal";"GNC (gás natural comprimido) - €/kg";"kg";"1";"2.577";"2.577";"2.577";
 "Setúbal";"GNC (gás natural comprimido) - €/m3";"m3";"1";"3.279";"3.279";"3.279";
 "Setúbal";"GNL (gás natural liquefeito) - €/kg";"kg";"2";"3.189";"3.099";"3.279";
-"Setúbal";"GPL Auto";"litro";"34";"1.032";"0.959";"1.089";"1.000"
-"Viana do Castelo";"Biodiesel B15";"litro";"5";"2.123";"2.089";"2.169";
-"Viana do Castelo";"Gasolina 98";"litro";"9";"2.263";"2.119";"2.413";
+"Setúbal";"GPL Auto";"litro";"34";"1.033";"0.959";"1.089";"1.000"
+"Viana do Castelo";"Biodiesel B15";"litro";"5";"2.136";"2.114";"2.169";
+"Viana do Castelo";"Gasolina 98";"litro";"10";"2.266";"2.119";"2.387";
 "Viana do Castelo";"Gasolina de mistura (motores a 2 tempos)";"litro";"2";"2.665";"2.530";"2.800";
-"Viana do Castelo";"Gasolina especial 95";"litro";"43";"2.176";"2.039";"2.234";
-"Viana do Castelo";"Gasolina especial 98";"litro";"34";"2.383";"2.035";"2.459";
-"Viana do Castelo";"Gasolina simples 95";"litro";"77";"2.148";"2.019";"2.224";"2.140"
-"Viana do Castelo";"Gasóleo colorido";"litro";"45";"1.850";"1.699";"1.904";
-"Viana do Castelo";"Gasóleo de aquecimento";"litro";"4";"2.167";"2.000";"2.250";
-"Viana do Castelo";"Gasóleo especial";"litro";"77";"2.287";"2.089";"2.429";
-"Viana do Castelo";"Gasóleo simples";"litro";"72";"2.235";"1.999";"2.329";"2.200"
-"Viana do Castelo";"GPL Auto";"litro";"11";"1.014";"0.984";"1.079";"1.000"
-"Vila Real";"Biodiesel B15";"litro";"5";"2.163";"2.129";"2.229";
-"Vila Real";"Gasolina 98";"litro";"16";"2.296";"2.169";"2.434";
+"Viana do Castelo";"Gasolina especial 95";"litro";"43";"2.185";"2.039";"2.434";
+"Viana do Castelo";"Gasolina especial 98";"litro";"34";"2.392";"2.276";"2.434";
+"Viana do Castelo";"Gasolina simples 95";"litro";"78";"2.145";"2.019";"2.224";"2.140"
+"Viana do Castelo";"Gasóleo colorido";"litro";"46";"1.851";"1.729";"1.904";
+"Viana do Castelo";"Gasóleo de aquecimento";"litro";"5";"2.179";"2.000";"2.294";
+"Viana do Castelo";"Gasóleo especial";"litro";"78";"2.294";"2.089";"2.429";
+"Viana do Castelo";"Gasóleo simples";"litro";"73";"2.241";"2.089";"2.329";"2.200"
+"Viana do Castelo";"GPL Auto";"litro";"12";"1.026";"0.984";"1.159";"1.000"
+"Vila Real";"Biodiesel B15";"litro";"5";"2.165";"2.129";"2.229";
+"Vila Real";"Gasolina 98";"litro";"16";"2.285";"2.149";"2.434";
 "Vila Real";"Gasolina de mistura (motores a 2 tempos)";"litro";"3";"2.533";"2.400";"2.700";
-"Vila Real";"Gasolina especial 95";"litro";"40";"2.185";"2.029";"2.274";
-"Vila Real";"Gasolina especial 98";"litro";"30";"2.400";"2.289";"2.519";
-"Vila Real";"Gasolina simples 95";"litro";"87";"2.162";"2.029";"2.319";"2.140"
-"Vila Real";"Gasóleo colorido";"litro";"61";"1.853";"1.659";"1.939";
-"Vila Real";"Gasóleo de aquecimento";"litro";"7";"2.267";"2.209";"2.334";
-"Vila Real";"Gasóleo especial";"litro";"83";"2.295";"2.119";"2.459";
-"Vila Real";"Gasóleo simples";"litro";"83";"2.247";"2.089";"2.449";"2.200"
+"Vila Real";"Gasolina especial 95";"litro";"40";"2.182";"2.029";"2.274";
+"Vila Real";"Gasolina especial 98";"litro";"30";"2.398";"2.289";"2.519";
+"Vila Real";"Gasolina simples 95";"litro";"88";"2.157";"2.029";"2.319";"2.140"
+"Vila Real";"Gasóleo colorido";"litro";"62";"1.857";"1.689";"1.939";
+"Vila Real";"Gasóleo de aquecimento";"litro";"8";"2.259";"2.200";"2.334";
+"Vila Real";"Gasóleo especial";"litro";"84";"2.300";"2.128";"2.459";
+"Vila Real";"Gasóleo simples";"litro";"84";"2.253";"2.109";"2.449";"2.200"
 "Vila Real";"GPL Auto";"litro";"5";"1.045";"0.979";"1.089";"1.000"
-"Viseu";"Biodiesel B15";"litro";"10";"2.159";"2.089";"2.309";
-"Viseu";"Gasolina 98";"litro";"39";"2.281";"2.109";"2.434";
-"Viseu";"Gasolina de mistura (motores a 2 tempos)";"litro";"9";"2.634";"2.500";"2.800";
-"Viseu";"Gasolina especial 95";"litro";"70";"2.181";"2.044";"2.275";
-"Viseu";"Gasolina especial 98";"litro";"57";"2.383";"2.285";"2.459";
-"Viseu";"Gasolina simples 95";"litro";"160";"2.149";"2.014";"2.249";"2.140"
-"Viseu";"Gasóleo colorido";"litro";"109";"1.816";"1.219";"1.939";
-"Viseu";"Gasóleo de aquecimento";"litro";"16";"2.239";"2.070";"2.302";
-"Viseu";"Gasóleo especial";"litro";"153";"2.278";"2.084";"2.429";
-"Viseu";"Gasóleo simples";"litro";"153";"2.226";"2.069";"2.329";"2.200"
+"Viseu";"Biodiesel B15";"litro";"10";"2.177";"2.124";"2.309";
+"Viseu";"Gasolina 98";"litro";"42";"2.267";"2.089";"2.434";
+"Viseu";"Gasolina de mistura (motores a 2 tempos)";"litro";"9";"2.633";"2.500";"2.800";
+"Viseu";"Gasolina especial 95";"litro";"73";"2.172";"2.044";"2.274";
+"Viseu";"Gasolina especial 98";"litro";"57";"2.381";"2.285";"2.434";
+"Viseu";"Gasolina simples 95";"litro";"164";"2.140";"2.009";"2.224";"2.140"
+"Viseu";"Gasóleo colorido";"litro";"113";"1.826";"1.219";"1.939";
+"Viseu";"Gasóleo de aquecimento";"litro";"18";"2.262";"2.120";"2.354";
+"Viseu";"Gasóleo especial";"litro";"156";"2.285";"2.109";"2.429";
+"Viseu";"Gasóleo simples";"litro";"157";"2.233";"2.099";"2.329";"2.200"
 "Viseu";"GPL Auto";"litro";"20";"1.030";"0.936";"1.169";"1.000"
-"Évora";"Biodiesel B15";"litro";"7";"2.143";"2.119";"2.174";
-"Évora";"Gasolina 98";"litro";"12";"2.301";"2.215";"2.429";
-"Évora";"Gasolina especial 95";"litro";"35";"2.209";"2.072";"2.284";
+"Évora";"Biodiesel B15";"litro";"7";"2.165";"2.149";"2.174";
+"Évora";"Gasolina 98";"litro";"12";"2.299";"2.194";"2.429";
+"Évora";"Gasolina especial 95";"litro";"35";"2.209";"2.072";"2.304";
 "Évora";"Gasolina especial 98";"litro";"18";"2.414";"2.344";"2.459";
-"Évora";"Gasolina simples 95";"litro";"76";"2.158";"2.049";"2.229";"2.140"
-"Évora";"Gasóleo colorido";"litro";"35";"1.862";"1.759";"1.939";
-"Évora";"Gasóleo especial";"litro";"72";"2.295";"2.112";"2.439";
-"Évora";"Gasóleo simples";"litro";"72";"2.252";"2.072";"2.354";"2.200"
+"Évora";"Gasolina simples 95";"litro";"77";"2.158";"2.044";"2.287";"2.140"
+"Évora";"Gasóleo colorido";"litro";"37";"1.861";"1.730";"1.939";
+"Évora";"Gasóleo especial";"litro";"73";"2.303";"2.136";"2.429";
+"Évora";"Gasóleo simples";"litro";"74";"2.256";"2.096";"2.329";"2.200"
 "Évora";"GPL Auto";"litro";"8";"1.037";"0.979";"1.089";"1.000"

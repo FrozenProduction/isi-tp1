@@ -48,7 +48,7 @@ actualização do dia.
 
 Uma única chamada à DGEG devolve **~14 000 linhas** (≈3 100 postos × 14 combustíveis) em ~1,4 s, sem chave de
 API. O total **muda ao longo do dia** (14 073 → 13 957 → 14 053), por isso cada execução é datada e guardada em
-`dados/snapshot-<data>/`; o snapshot incluído neste repositório é o de **19/10/2026 (14 213 linhas)**.
+`dados/snapshot-<data>/`; o snapshot incluído neste repositório é o do dia **19/10/2026 (14 463 linhas)**, recolhido a 20/10.
 
 O preço-alvo é **por combustível** e não por distrito: o alvo de 2,200 €/L é um alvo de gasóleo, e compará-lo com
 o GPL (≈1,00 €/L) ou com um gasóleo colorido daria alertas falsos. Os três combustíveis de estrada têm alvo

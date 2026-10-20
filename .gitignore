@@ -6,9 +6,8 @@ logs/
 *.log
 
 # ---- Vídeos -----------------------------------------------------------
-# só o link (QR Code) entra no relatório; as gravações ficam no disco
-videos/*
-!videos/.gitkeep
+# a pasta videos/ tem o seu proprio .gitignore (ignora tudo la dentro menos ele proprio);
+# aqui ficam so as gravacoes que apareçam esquecidas noutra pasta
 *.mp4
 *.mkv
 

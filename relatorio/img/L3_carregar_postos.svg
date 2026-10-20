@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="759" height="540" viewBox="0 0 759 540">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#44546a"/></marker><marker id="e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b91c1c"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="26" y="44" font-family="Liberation Sans, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1f2937">L3_carregar_postos</text>
+<text x="26" y="63" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#6b7280">10 passos &#183; 9 liga&#231;&#245;es</text>
+<path d="M648,118 C648,131 380,131 380,144" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M380,184 C380,197 350,197 350,210" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M380,250 C380,263 405,263 405,276" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M294,118 C294,197 371,197 371,276" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M380,316 C380,329 380,329 380,342" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M107,118 C107,230 371,230 371,342" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M380,382 C380,395 392,395 392,408" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M469,118 C469,263 371,263 371,408" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M380,448 C380,461 397,461 397,474" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<rect x="290" y="342" width="179" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="299" y="359" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Juntar concelho_id</text>
+<text x="299" y="373" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">StreamLookup</text>
+<rect x="290" y="276" width="179" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="299" y="293" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Juntar distrito_id</text>
+<text x="299" y="307" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">StreamLookup</text>
+<rect x="303" y="408" width="153" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="312" y="425" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Juntar marca_id</text>
+<text x="312" y="439" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">StreamLookup</text>
+<rect x="26" y="78" width="162" height="40" rx="6" fill="#e8eef7" stroke="#44546a" stroke-width="1.1"/>
+<text x="35" y="95" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Ler dim_concelho</text>
+<text x="35" y="109" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">TableInput</text>
+<rect x="214" y="78" width="162" height="40" rx="6" fill="#e8eef7" stroke="#44546a" stroke-width="1.1"/>
+<text x="223" y="95" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Ler dim_distrito</text>
+<text x="223" y="109" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">TableInput</text>
+<rect x="401" y="78" width="136" height="40" rx="6" fill="#e8eef7" stroke="#44546a" stroke-width="1.1"/>
+<text x="410" y="95" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Ler dim_marca</text>
+<text x="410" y="109" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">TableInput</text>
+<rect x="563" y="78" width="170" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="572" y="95" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Ler precos limpos</text>
+<text x="572" y="109" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">CsvInput</text>
+<rect x="294" y="144" width="170" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="304" y="161" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Ordenar por posto</text>
+<text x="304" y="175" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">SortRows</text>
+<rect x="264" y="210" width="230" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="273" y="227" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Remover postos repetidos</text>
+<text x="273" y="241" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">Unique</text>
+<rect x="321" y="474" width="118" height="40" rx="6" fill="#eaf5ea" stroke="#44546a" stroke-width="1.1"/>
+<text x="330" y="491" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">dim_posto</text>
+<text x="330" y="505" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">InsertUpdate</text>
+</svg>

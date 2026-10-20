@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="811" height="606" viewBox="0 0 811 606">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#44546a"/></marker><marker id="e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b91c1c"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="26" y="44" font-family="Liberation Sans, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1f2937">L4_carregar_factos</text>
+<text x="26" y="63" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#6b7280">17 passos &#183; 15 liga&#231;&#245;es</text>
+<path d="M436,184 C436,197 205,197 205,210" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M460,118 C460,164 213,164 213,210" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M222,250 C222,263 645,263 645,276" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M94,118 C94,164 418,164 418,210" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M606,184 C606,197 409,197 409,210" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M418,250 C418,263 218,263 218,276" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M235,184 C235,230 240,230 240,276" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M248,316 C248,329 392,329 392,342" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M682,118 C682,230 397,230 397,342" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M405,382 C405,395 414,395 414,408" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M264,118 C264,164 589,164 589,210" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M602,250 C602,263 462,263 462,276" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M444,316 C444,362 375,362 375,408" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M405,448 C405,461 431,461 431,474" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M405,514 C405,527 367,527 367,540" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<rect x="329" y="474" width="153" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="338" y="491" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Calcular desvio</text>
+<text x="338" y="505" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">ScriptValueMod</text>
+<rect x="120" y="210" width="205" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="129" y="227" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Juntar combustivel_id</text>
+<text x="129" y="241" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">StreamLookup</text>
+<rect x="294" y="342" width="222" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="304" y="359" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Juntar combustivel_id 2</text>
+<text x="304" y="373" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">StreamLookup</text>
+<rect x="150" y="276" width="196" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="159" y="293" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Juntar distrito_id 2</text>
+<text x="159" y="307" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">StreamLookup</text>
+<rect x="303" y="408" width="205" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="312" y="425" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Juntar media nacional</text>
+<text x="312" y="439" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">StreamLookup</text>
+<rect x="350" y="210" width="136" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="359" y="227" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Juntar run_id</text>
+<text x="359" y="241" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">JoinRows</text>
+<rect x="26" y="78" width="136" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="35" y="95" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Ler agregados</text>
+<text x="35" y="109" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">CsvInput</text>
+<rect x="188" y="78" width="153" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="197" y="95" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Ler agregados 2</text>
+<text x="197" y="109" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">CsvInput</text>
+<rect x="367" y="78" width="187" height="40" rx="6" fill="#e8eef7" stroke="#44546a" stroke-width="1.1"/>
+<text x="376" y="95" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Ler dim_combustivel</text>
+<text x="376" y="109" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">TableInput</text>
+<rect x="580" y="78" width="205" height="40" rx="6" fill="#e8eef7" stroke="#44546a" stroke-width="1.1"/>
+<text x="589" y="95" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Ler dim_combustivel 2</text>
+<text x="589" y="109" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">TableInput</text>
+<rect x="146" y="144" width="179" height="40" rx="6" fill="#e8eef7" stroke="#44546a" stroke-width="1.1"/>
+<text x="155" y="161" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Ler dim_distrito 2</text>
+<text x="155" y="175" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">TableInput</text>
+<rect x="351" y="144" width="170" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="360" y="161" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Ler precos limpos</text>
+<text x="360" y="175" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">CsvInput</text>
+<rect x="547" y="144" width="118" height="40" rx="6" fill="#e8eef7" stroke="#44546a" stroke-width="1.1"/>
+<text x="556" y="161" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Ler run_id</text>
+<text x="556" y="175" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">TableInput</text>
+<rect x="372" y="276" width="144" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="381" y="293" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Media nacional</text>
+<text x="381" y="307" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">GroupBy</text>
+<rect x="512" y="210" width="179" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="521" y="227" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Ordenar para media</text>
+<text x="521" y="241" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">SortRows</text>
+<rect x="290" y="540" width="230" height="40" rx="6" fill="#eaf5ea" stroke="#44546a" stroke-width="1.1"/>
+<text x="299" y="557" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">agg_distrito_combustivel</text>
+<text x="299" y="571" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">InsertUpdate</text>
+<rect x="543" y="276" width="118" height="40" rx="6" fill="#eaf5ea" stroke="#44546a" stroke-width="1.1"/>
+<text x="552" y="293" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">fact_preco</text>
+<text x="552" y="307" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">InsertUpdate</text>
+</svg>

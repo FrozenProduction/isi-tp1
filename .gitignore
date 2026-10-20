@@ -51,3 +51,4 @@ relatorio/relatorio.md
 relatorio/build_pdf.py
 relatorio/gerar_diagramas.py
 relatorio/img/logo-est.png
+nodered/test-flows.mjs

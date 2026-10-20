@@ -1,0 +1,230 @@
+[
+  {
+    "id": "f1",
+    "type": "tab",
+    "label": "01 recolha (streaming)",
+    "disabled": false,
+    "info": "Inject 15 min -> API DGEG -> grava o payload bruto em dados/raw (5 MB por recolha) e publica um evento resumido em MQTT (precos/recolha). O payload completo nao vai pelo broker de proposito: 14 mil registos sao 6 MB. O intervalo e um parametro do no inject."
+  },
+  {
+    "id": "f2",
+    "type": "tab",
+    "label": "02 consumo",
+    "disabled": false,
+    "info": "Subscreve precos/recolha e transforma o evento numa linha legivel. E o lado consumidor: qualquer numero de processos pode subscrever o mesmo topico."
+  },
+  {
+    "id": "a1",
+    "type": "inject",
+    "z": "f1",
+    "name": "recolher a cada 15 min",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "900",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "3",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 170,
+    "y": 120,
+    "wires": [
+      [
+        "a2"
+      ]
+    ]
+  },
+  {
+    "id": "a2",
+    "type": "http request",
+    "z": "f1",
+    "name": "API DGEG PrecoComb",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "https://precoscombustiveis.dgeg.gov.pt/api/PrecoComb/PesquisarPostos?qtdPorPagina=100000&pagina=1",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": false,
+    "headers": [],
+    "x": 400,
+    "y": 120,
+    "wires": [
+      [
+        "a3"
+      ]
+    ]
+  },
+  {
+    "id": "a3",
+    "type": "function",
+    "z": "f1",
+    "name": "gravar bruto + resumo",
+    "func": "const d = msg.payload || {};\nconst r = Array.isArray(d.resultado) ? d.resultado : [];\nif (r.length === 0) { node.warn('resposta sem resultado'); return null; }\n\nconst ts = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');\nconst paraNumero = s => { const m = String(s).replace(',', '.').match(/[0-9]+(\\.[0-9]+)?/); return m ? parseFloat(m[0]) : null; };\nconst gasoleo = r.filter(x => x.Combustivel === 'Gasóleo simples').map(x => paraNumero(x.Preco)).filter(v => v !== null);\nconst media = gasoleo.length ? gasoleo.reduce((a, b) => a + b, 0) / gasoleo.length : null;\n\nreturn [\n  {\n    filename: 'D:/HermesAssistant/uni/classes/Integração de Sistemas de Informação/trabalhos/TP1/dados/raw/precos-' + ts + '.json',\n    payload: JSON.stringify(d)\n  },\n  {\n    topic: 'precos/recolha',\n    payload: {\n      ts: ts,\n      registos: r.length,\n      postos: new Set(r.map(x => x.Id)).size,\n      gasoleo_postos: gasoleo.length,\n      gasoleo_media: media === null ? null : Math.round(media * 1000) / 1000,\n      total_na_fonte: r[0].Quantidade || null\n    }\n  }\n];",
+    "outputs": 2,
+    "timeout": 30,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 650,
+    "y": 140,
+    "wires": [
+      [
+        "a4"
+      ],
+      [
+        "a5"
+      ]
+    ]
+  },
+  {
+    "id": "a4",
+    "type": "file",
+    "z": "f1",
+    "name": "zona de aterragem (dados/raw)",
+    "filename": "filename",
+    "filenameType": "msg",
+    "appendNewline": false,
+    "createDir": true,
+    "overwriteFile": "true",
+    "encoding": "utf8",
+    "x": 950,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "a5",
+    "type": "mqtt out",
+    "z": "f1",
+    "name": "publicar precos/recolha",
+    "topic": "precos/recolha",
+    "qos": "0",
+    "retain": "false",
+    "respTopic": "",
+    "contentType": "",
+    "userProps": "",
+    "correl": "",
+    "expiry": "",
+    "broker": "b1",
+    "x": 920,
+    "y": 160,
+    "wires": [
+      [
+        "a6"
+      ]
+    ]
+  },
+  {
+    "id": "a6",
+    "type": "debug",
+    "z": "f1",
+    "name": "evento publicado",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": true,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "payload",
+    "statusType": "auto",
+    "x": 1130,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "c1",
+    "type": "mqtt in",
+    "z": "f2",
+    "name": "precos/recolha",
+    "topic": "precos/recolha",
+    "qos": "0",
+    "datatype": "json",
+    "broker": "b1",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "x": 190,
+    "y": 120,
+    "wires": [
+      [
+        "c2"
+      ]
+    ]
+  },
+  {
+    "id": "c2",
+    "type": "function",
+    "z": "f2",
+    "name": "linha de resumo",
+    "func": "const p = msg.payload || {};\nconst media = p.gasoleo_media === null ? 'n/d' : p.gasoleo_media.toFixed(3).replace('.', ',') + ' EUR/L';\nmsg.payload = 'recolha ' + p.ts + ' | ' + p.registos + ' precos | ' + p.postos + ' postos | gasoleo ' + media;\nreturn msg;",
+    "outputs": 1,
+    "timeout": 30,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 430,
+    "y": 120,
+    "wires": [
+      [
+        "c3"
+      ]
+    ]
+  },
+  {
+    "id": "c3",
+    "type": "debug",
+    "z": "f2",
+    "name": "resumo recebido",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": true,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "payload",
+    "statusType": "auto",
+    "x": 660,
+    "y": 120,
+    "wires": []
+  },
+  {
+    "id": "b1",
+    "type": "mqtt-broker",
+    "name": "mosquitto local",
+    "broker": "127.0.0.1",
+    "port": "1883",
+    "clientid": "",
+    "autoConnect": true,
+    "usetls": false,
+    "protocolVersion": "4",
+    "keepalive": "60",
+    "cleansession": true,
+    "autoUnsubscribe": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthRetain": "false",
+    "birthPayload": "",
+    "birthMsg": {},
+    "closeTopic": "",
+    "closeQos": "0",
+    "closeRetain": "false",
+    "closePayload": "",
+    "closeMsg": {},
+    "willTopic": "",
+    "willQos": "0",
+    "willRetain": "false",
+    "willPayload": "",
+    "willMsg": {},
+    "sessionExpiry": ""
+  }
+]

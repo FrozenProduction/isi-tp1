@@ -23,11 +23,15 @@ dados/out/rejeitados.csv
 dados/out/nulos.csv
 
 # ---- Notas de trabalho (privadas: ficam só no disco) -----------------
-# o relatório final entra mais tarde; as notas de apoio e as consultas de
-# verificação não são material do repositório público.
+# o relatorio final entra mais tarde; as notas de apoio e as consultas de
+# verificacao nao sao material do repositorio publico.
 relatorio/00-notas-e-evidencias.md
 relatorio/01-conformidade-enunciado.md
 sql/99_verificacao.sql
+
+# ---- Artefactos de construcao do relatorio (regeneraveis) -------------
+# _relatorio.html, _preview.*, _pag*.png: saida do build_pdf.py e da revisao
+relatorio/_*
 
 # ---- Windows / editores ----------------------------------------------
 Thumbs.db
@@ -39,3 +43,11 @@ desktop.ini
 .env
 *.secret
 *.password
+
+# ---- Relatorio: fonte e ferramentas de build -------------------------
+# o entregavel e o PDF; o markdown de origem e os scripts que o compoem
+# ficam fora do repositorio.
+relatorio/relatorio.md
+relatorio/build_pdf.py
+relatorio/gerar_diagramas.py
+relatorio/img/logo-est.png

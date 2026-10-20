@@ -10,7 +10,7 @@
     <parameters>
       <parameter>
         <name>SNAPSHOT_DIR</name>
-        <default_value>snapshot-2026-10-12</default_value>
+        <default_value>snapshot-2026-10-19</default_value>
         <description>Pasta do snapshot do dia, dentro de dados/</description>
       </parameter>
     </parameters>

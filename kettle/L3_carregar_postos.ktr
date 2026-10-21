@@ -578,7 +578,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
+      <xloc>720</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
@@ -620,7 +620,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>400</xloc>
+      <xloc>464</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
@@ -662,7 +662,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
+      <xloc>960</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
@@ -766,8 +766,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>112</yloc>
+      <xloc>720</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -928,8 +928,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
-      <yloc>112</yloc>
+      <xloc>960</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1223,7 +1223,7 @@
     </remotesteps>
     <GUI>
       <xloc>112</xloc>
-      <yloc>112</yloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1264,8 +1264,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>112</yloc>
+      <xloc>288</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1299,8 +1299,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>400</xloc>
-      <yloc>112</yloc>
+      <xloc>464</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1327,11 +1327,11 @@
         <condition>=</condition>
         <name2/>
       </key>
-        <value>
-          <name>posto_id</name>
-          <rename>id_posto</rename>
-          <update>N</update>
-        </value>
+      <value>
+        <name>posto_id</name>
+        <rename>id_posto</rename>
+        <update>N</update>
+      </value>
       <value>
         <name>nome</name>
         <rename>nome</rename>
@@ -1382,7 +1382,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>992</xloc>
+      <xloc>1232</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>

@@ -12,7 +12,7 @@
   <modified_date>2023/10/07 15:30:39.310</modified_date>
   <parameters>
     </parameters>
-<connection>
+  <connection>
     <name>ISI_TP1</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
@@ -438,7 +438,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>368</xloc>
+      <xloc>400</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -477,7 +477,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>512</xloc>
+      <xloc>576</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -516,7 +516,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>656</xloc>
+      <xloc>736</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -555,7 +555,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>800</xloc>
+      <xloc>912</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -594,7 +594,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>944</xloc>
+      <xloc>1072</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -633,7 +633,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1088</xloc>
+      <xloc>1216</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -672,7 +672,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1232</xloc>
+      <xloc>1360</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -686,7 +686,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1376</xloc>
+      <xloc>1520</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -709,7 +709,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1520</xloc>
+      <xloc>1712</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -748,7 +748,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1664</xloc>
+      <xloc>1872</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -771,7 +771,7 @@ WHERE run_id = (SELECT max(run_id) FROM staging_preco)</sql>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1808</xloc>
+      <xloc>2032</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -808,13 +808,13 @@ WHERE run_id = (SELECT max(run_id) FROM staging_preco)</sql>
       <sensitivity>normal</sensitivity>
       <secureconnectiontype>TLS</secureconnectiontype>
       <replyToAddresses/>
-      <filetypes></filetypes>
+      <filetypes>      </filetypes>
       <embeddedimages>
       </embeddedimages>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1952</xloc>
+      <xloc>2208</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -852,14 +852,14 @@ Verificar a consola do Spoon / o log de execucao e a tabela execucao no PostgreS
       <sensitivity>normal</sensitivity>
       <secureconnectiontype>TLS</secureconnectiontype>
       <replyToAddresses/>
-      <filetypes></filetypes>
+      <filetypes>      </filetypes>
       <embeddedimages>
       </embeddedimages>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1232</xloc>
-      <yloc>224</yloc>
+      <xloc>1360</xloc>
+      <yloc>480</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -872,7 +872,7 @@ Verificar a consola do Spoon / o log de execucao e a tabela execucao no PostgreS
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>2208</xloc>
-      <yloc>224</yloc>
+      <yloc>464</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
@@ -1103,7 +1103,6 @@ Verificar a consola do Spoon / o log de execucao e a tabela execucao no PostgreS
       <unconditional>N</unconditional>
     </hop>
   </hops>
-  
   <notepads>
   </notepads>
   <attributes/>

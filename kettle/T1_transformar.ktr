@@ -622,7 +622,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1152</xloc>
+      <xloc>1264</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
@@ -684,7 +684,7 @@ var marca_norm = marca == null ? null : marca.trim().toUpperCase();</jsScript_sc
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
+      <xloc>832</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
@@ -837,7 +837,7 @@ var marca_norm = marca == null ? null : marca.trim().toUpperCase();</jsScript_sc
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1280</xloc>
+      <xloc>1392</xloc>
       <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1170,7 +1170,7 @@ var marca_norm = marca == null ? null : marca.trim().toUpperCase();</jsScript_sc
       </output>
     </remotesteps>
     <GUI>
-      <xloc>864</xloc>
+      <xloc>976</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1359,8 +1359,8 @@ var marca_norm = marca == null ? null : marca.trim().toUpperCase();</jsScript_sc
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>256</yloc>
+      <xloc>352</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1425,7 +1425,7 @@ var marca_norm = marca == null ? null : marca.trim().toUpperCase();</jsScript_sc
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
+      <xloc>352</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1478,8 +1478,8 @@ var marca_norm = marca == null ? null : marca.trim().toUpperCase();</jsScript_sc
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
-      <yloc>96</yloc>
+      <xloc>672</xloc>
+      <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1779,7 +1779,7 @@ WHERE run_id = (SELECT max(run_id) FROM staging_preco)
     </remotesteps>
     <GUI>
       <xloc>48</xloc>
-      <yloc>256</yloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1820,7 +1820,7 @@ WHERE run_id = (SELECT max(run_id) FROM staging_preco)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1152</xloc>
+      <xloc>1264</xloc>
       <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1883,7 +1883,7 @@ WHERE run_id = (SELECT max(run_id) FROM staging_preco)
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1008</xloc>
+      <xloc>1120</xloc>
       <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2325,7 +2325,7 @@ WHERE run_id = (SELECT max(run_id) FROM staging_preco);</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1008</xloc>
+      <xloc>1120</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2598,8 +2598,8 @@ WHERE run_id = (SELECT max(run_id) FROM staging_preco);</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
-      <yloc>272</yloc>
+      <xloc>672</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2641,7 +2641,7 @@ WHERE run_id = (SELECT max(run_id) FROM staging_preco);</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>160</xloc>
+      <xloc>192</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2691,7 +2691,7 @@ WHERE run_id = (SELECT max(run_id) FROM staging_preco);</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>400</xloc>
+      <xloc>512</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>

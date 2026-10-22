@@ -1,41 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="358" height="606" viewBox="0 0 358 606">
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="830" viewBox="0 0 384 830">
 <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#44546a"/></marker><marker id="e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b91c1c"/></marker></defs>
 <rect width="100%" height="100%" fill="#ffffff"/>
 <text x="26" y="44" font-family="Liberation Sans, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1f2937">E1_extrair_api</text>
 <text x="26" y="63" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#6b7280">9 passos &#183; 8 liga&#231;&#245;es</text>
-<path d="M264,118 C264,131 188,131 188,144" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
-<path d="M179,184 C179,197 179,197 179,210" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
-<path d="M179,316 C179,329 183,329 183,342" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
-<path d="M179,250 C179,263 170,263 170,276" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
-<path d="M98,118 C98,197 183,197 183,276" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
-<path d="M179,448 C179,461 179,461 179,474" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
-<path d="M179,514 C179,527 175,527 175,540" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
-<path d="M179,382 C179,395 179,395 179,408" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
-<rect x="26" y="78" width="144" height="40" rx="6" fill="#e8eef7" stroke="#44546a" stroke-width="1.1"/>
-<text x="35" y="95" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Criar execucao</text>
-<text x="35" y="109" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">TableInput</text>
+<path d="M264,118 L264,131 L273,131 L273,176" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M273,216 L273,274" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M264,412 L264,425 L269,425 L269,470" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M273,314 L273,327 L264,327 L264,372" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M170,392 L196,392" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M269,608 L269,666" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M269,706 L269,719 L264,719 L264,764" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M269,510 L269,568" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<rect x="26" y="372" width="144" height="40" rx="6" fill="#e8eef7" stroke="#44546a" stroke-width="1.1"/>
+<text x="35" y="389" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Criar execucao</text>
+<text x="35" y="403" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">TableInput</text>
 <rect x="196" y="78" width="136" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
 <text x="205" y="95" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Generate rows</text>
 <text x="205" y="109" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">RowGenerator</text>
-<rect x="120" y="210" width="118" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
-<text x="129" y="227" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">JSON input</text>
-<text x="129" y="241" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">JsonInput</text>
-<rect x="111" y="276" width="136" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
-<text x="120" y="293" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Juntar run_id</text>
-<text x="120" y="307" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">JoinRows</text>
-<rect x="120" y="144" width="119" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
-<text x="129" y="161" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">REST client</text>
-<text x="129" y="175" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">Rest</text>
-<rect x="116" y="408" width="127" height="40" rx="6" fill="#eaf5ea" stroke="#44546a" stroke-width="1.1"/>
-<text x="124" y="425" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Escrever CSV</text>
-<text x="124" y="439" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">TextFileOutput</text>
-<rect x="116" y="474" width="127" height="40" rx="6" fill="#eaf5ea" stroke="#44546a" stroke-width="1.1"/>
-<text x="124" y="491" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Escrever XML</text>
-<text x="124" y="505" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">XMLOutput</text>
-<rect x="111" y="540" width="136" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
-<text x="120" y="557" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Escrever JSON</text>
-<text x="120" y="571" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">JsonOutput</text>
-<rect x="116" y="342" width="127" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
-<text x="124" y="359" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Limpar dummy</text>
-<text x="124" y="373" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">SelectValues</text>
+<rect x="214" y="274" width="118" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="223" y="291" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">JSON input</text>
+<text x="223" y="305" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">JsonInput</text>
+<rect x="196" y="372" width="136" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="205" y="389" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Juntar run_id</text>
+<text x="205" y="403" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">JoinRows</text>
+<rect x="214" y="176" width="119" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="223" y="193" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">REST client</text>
+<text x="223" y="207" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">Rest</text>
+<rect x="205" y="568" width="127" height="40" rx="6" fill="#eaf5ea" stroke="#44546a" stroke-width="1.1"/>
+<text x="214" y="585" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Escrever CSV</text>
+<text x="214" y="599" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">TextFileOutput</text>
+<rect x="205" y="666" width="127" height="40" rx="6" fill="#eaf5ea" stroke="#44546a" stroke-width="1.1"/>
+<text x="214" y="683" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Escrever XML</text>
+<text x="214" y="697" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">XMLOutput</text>
+<rect x="196" y="764" width="136" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="205" y="781" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Escrever JSON</text>
+<text x="205" y="795" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">JsonOutput</text>
+<rect x="205" y="470" width="127" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="214" y="487" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Limpar dummy</text>
+<text x="214" y="501" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">SelectValues</text>
 </svg>

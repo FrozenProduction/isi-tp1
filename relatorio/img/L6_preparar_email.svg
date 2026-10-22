@@ -1,25 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="834" height="144" viewBox="0 0 834 144">
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="536" viewBox="0 0 240 536">
 <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#44546a"/></marker><marker id="e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b91c1c"/></marker></defs>
 <rect width="100%" height="100%" fill="#ffffff"/>
 <text x="26" y="44" font-family="Liberation Sans, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1f2937">L6_preparar_email</text>
 <text x="26" y="63" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#6b7280">5 passos &#183; 4 liga&#231;&#245;es</text>
-<path d="M162,98 C175,98 175,98 188,98" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
-<path d="M306,98 C319,98 319,98 332,98" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
-<path d="M468,98 C481,98 481,98 494,98" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
-<path d="M621,98 C634,98 634,98 647,98" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
-<rect x="647" y="78" width="162" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
-<text x="656" y="95" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Definir variavel</text>
-<text x="656" y="109" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">SetVariable</text>
-<rect x="332" y="78" width="136" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
-<text x="341" y="95" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Juntar linhas</text>
-<text x="341" y="109" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">GroupBy</text>
-<rect x="26" y="78" width="136" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
-<text x="35" y="95" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Ler agregados</text>
-<text x="35" y="109" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">CsvInput</text>
-<rect x="188" y="78" width="118" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
-<text x="197" y="95" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Linha HTML</text>
-<text x="197" y="109" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">ScriptValueMod</text>
-<rect x="494" y="78" width="127" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
-<text x="503" y="95" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Montar corpo</text>
-<text x="503" y="109" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">ScriptValueMod</text>
+<path d="M120,118 L120,131 L129,131 L129,176" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M129,216 L129,229 L120,229 L120,274" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M120,314 L120,327 L124,327 L124,372" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<path d="M124,412 L124,425 L107,425 L107,470" fill="none" stroke="#44546a" stroke-width="1.3" marker-end="url(#a)"/>
+<rect x="26" y="470" width="162" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="35" y="487" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Definir variavel</text>
+<text x="35" y="501" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">SetVariable</text>
+<rect x="52" y="274" width="136" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="61" y="291" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Juntar linhas</text>
+<text x="61" y="305" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">GroupBy</text>
+<rect x="52" y="78" width="136" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="61" y="95" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Ler agregados</text>
+<text x="61" y="109" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">CsvInput</text>
+<rect x="70" y="176" width="118" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="79" y="193" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Linha HTML</text>
+<text x="79" y="207" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">ScriptValueMod</text>
+<rect x="60" y="372" width="127" height="40" rx="6" fill="#f1f2f4" stroke="#44546a" stroke-width="1.1"/>
+<text x="69" y="389" font-family="Liberation Sans, Arial, sans-serif" font-size="11.5" fill="#111827">Montar corpo</text>
+<text x="69" y="403" font-family="Liberation Sans, Arial, sans-serif" font-size="9" fill="#6b7280">ScriptValueMod</text>
 </svg>

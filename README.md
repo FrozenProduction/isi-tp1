@@ -1,7 +1,7 @@
 # ISI: Trabalho Prático I
-### Monitorização contínua de preços de combustíveis em Portugal
+### Monitorização e análise de preços de combustíveis em Portugal
 
-Unidade curricular: **Integração de Sistemas de Informação [11301]** · 2026/27 · UPCA/EST Barcelos
+Unidade curricular: **Integração de Sistemas de Informação [11301]** · 2026/2027 · UPCA/EST Barcelos
 Trabalho **individual** · Entrega: **22/10/2026** (e-learning)
 
 ---
@@ -29,14 +29,21 @@ Só a **E1** toca a rede. A API é contactada **uma vez por execução** e o res
 último snapshot e as fases T e L continuam a produzir modelo, exportações e dashboard: perde-se apenas a
 actualização do dia.
 
+O job é a via principal. Há ainda uma **segunda entrada de dados**, opcional: um fluxo em **Node-RED**
+que chama a mesma API a cada 15 minutos e publica um resumo no tópico `precos/recolha` de um broker
+**Mosquitto** local (`nodered/flows.json`). Mostra o mesmo dado a chegar por um fluxo contínuo, sem
+substituir o job.
+
 ## 3. Ferramentas
 
 | Ferramenta | Papel |
 |---|---|
 | **Pentaho Data Integration CE 10.2 (Kettle/Spoon)** | motor ETL (E, T e L) |
 | **PostgreSQL 17** (+ pgAdmin 4) | base de dados: staging, modelo dimensional e histórico |
-| **Grafana** | dashboards sobre o PostgreSQL (fase de visualização) |
-| **Git** | versionamento de todo o material |
+| **Grafana 13.2.4** | dashboards sobre o PostgreSQL (fase de visualização) |
+| **Node-RED 5.0** | recolha contínua da API por fluxos (segunda entrada de dados, opcional) |
+| **Mosquitto 2.1.2** | broker MQTT local onde o fluxo publica o evento resumido |
+| **Git e GitHub** | versionamento e publicação de todo o material |
 
 ## 4. Fontes de dados
 
@@ -114,7 +121,7 @@ conta muda-se o `server`/`port` nas entradas *Enviar email*. Sem as variáveis `
 | **T: Processamento e transformação** | concluída | `T1` (15 passos): leitura do staging, **remoção de duplicados** (`Unique` por posto × combustível), **identificação de valores nulos** (os postos sem código postal saem em `dados/out/nulos.csv`, com o campo em falta: as linhas não se perdem), regex do preço (`"0,849 €"` → número), ramo de validação, unidade derivada do nome do combustível, cálculo do preço e normalização da marca, agrupamento por distrito × combustível (contagem, média, mínimo e máximo) e cruzamento com o preço-alvo do próprio combustível |
 | **L: Persistência, exportação e notificações** | concluída | `L1` dimensões (18 distritos · 14 combustíveis · 55 marcas) · `L2` concelhos (277) · `L3` postos (3 143) · `L4` factos (14 213 preços) + agregados (208) + desvio à média nacional · `L5` exportações XML/JSON/CSV/SQL · `L6` corpo HTML do email |
 | **Orquestração** | concluída | `JOB_TP1.kjb`: `E1 -> E2 -> T1 -> L1..L6`, relatório HTML por XSLT sobre o XML exportado, email de resumo (alertas em destaque) e de erro, fecho da tabela `execucao` |
-| **Visualização e entrega** | parcial | dashboard **Grafana** sobre o modelo (4 painéis + 3 indicadores) e relatório final em PDF (8 secções) concluídos; falta o **vídeo** com QR Code, o empacotamento do ZIP e a submissão no e-learning |
+| **Visualização e entrega** | concluída | dashboard **Grafana** sobre o modelo (4 painéis + 3 indicadores), relatório final em PDF (8 secções, com índices e glossário), vídeo de demonstração com QR Code e pacote `31513.ZIP` prontos; falta só a submissão no e-learning |
 
 Números da execução de 19/10 (run 25, a que este repositório corresponde): **14 213 linhas** lidas → **0 duplicados**
 removidos (o passo existe e é a garantia explícita) → **10 linhas** identificadas com código postal em falta na
